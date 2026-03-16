@@ -8,7 +8,7 @@ export default function SearchLandingPage() {
       {/* Navigation */}
       <nav className="flex items-center justify-between py-3.5 px-8 border-b border-[var(--border)]">
         <Logo />
-        <div className="text-[10px] text-[var(--text4)] tracking-[0.1em] font-mono">
+        <div className="text-[13px] text-[var(--text4)] tracking-[0.03em] font-mono font-bold">
           PRIVATE COMPANY RESEARCH &middot; V1.0
         </div>
       </nav>
@@ -17,7 +17,7 @@ export default function SearchLandingPage() {
       <main className="flex-1 flex flex-col items-center justify-center py-[60px] px-8">
         {/* Eyebrow Tag */}
         <div className="text-[10px] text-[var(--gold)] tracking-[0.2em] mb-5 border border-[var(--gold-border)] py-1 px-3.5 bg-[var(--gold-bg)] font-mono">
-          DEAL SCREENING TOOL
+          COMPANY SCREENING TOOL
         </div>
 
         {/* Headline */}

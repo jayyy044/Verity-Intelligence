@@ -21,7 +21,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata = {
-  title: "Sagard Intelligence",
+  title: "Verity Intelligence",
   description:
     "Private Company Research System - Map any company's competitive ecosystem in 60 seconds",
 };
