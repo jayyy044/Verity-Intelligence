@@ -2,12 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { toast } from "react-toastify";
 
-interface SearchBarProps {
-  setLoading: (value: boolean) => void;
-  setCompanyName: (value: string) => void;
-}
 const sampleCompanies = [
   { company: "Wealthsimple", descriptor: "Canadian fintech wealth management investing" },
   { company: "League Inc.", descriptor: "Canadian digital health benefits platform" },
@@ -15,53 +10,24 @@ const sampleCompanies = [
   { company: "Nuvei", descriptor: "Canadian fintech payment processing" },
 ];
 
-export default function SearchBar({setLoading, setCompanyName}: SearchBarProps) {
+export default function SearchBar() {
   const [query, setQuery] = useState("");
   const [descriptor, setDescriptor] = useState("");
   const router = useRouter();
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.error("Search failed");
     const trimmed = query.trim();
     if (!trimmed) return;
-  
-    setCompanyName(trimmed);
-    setLoading(true);
-  
-    const payload = {
-      companyName: trimmed,
-      descriptor: descriptor.trim(),
-    };
-  
-    try {
-      const res = await fetch("/api/search", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-  
-      if (!res.ok) {
-        // console.error("Search failed", await res.text());
-        setTimeout( async() => {
-          toast.success("Search failed — please try again.");
-          setLoading(false);
-          console.error("Search failed", await res.text());
 
-        }, 3000);
-        return;
-      }
-  
-      const slug = trimmed
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .replace(/[^a-z0-9-]/g, "");
-  
-      router.push(`/results/${slug}?name=${encodeURIComponent(trimmed)}`);
-    } catch (err) {
-      console.error("Search error", err);
-      setLoading(false);
-    }
+    const slug = trimmed
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9-]/g, "");
+
+    router.push(
+      `/loading/${slug}?name=${encodeURIComponent(trimmed)}&descriptor=${encodeURIComponent(descriptor.trim())}`
+    );
   };
 
   const handlePillClick = (company: string, desc: string) => {

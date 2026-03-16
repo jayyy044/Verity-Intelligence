@@ -2,15 +2,19 @@
 import Logo from "@/components/shared/Logo";
 import SearchBar from "@/components/search/SearchBar";
 import StatsStrip from "@/components/search/StatsStrip";
-import Loading from "@/components/search/loading";
-import { useState } from "react";
-
-
-
+import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
+import { toast } from "react-toastify";
 
 export default function SearchLandingPage() {
-  const [loading, setLoading] = useState(false);
-  const [companyName, setCompanyName] = useState("");
+  const params = useSearchParams();
+  useEffect(() => {
+    const error = params.get("error");
+    if (error) {
+      toast.error(error);
+    }
+  }, [params]);
+
   return (
     <div className="w-full bg-[var(--bg)] min-h-screen flex flex-col border border-[var(--border)]">
       {/* Navigation */}
@@ -21,11 +25,6 @@ export default function SearchLandingPage() {
         </div>
       </nav>
 
-      {loading ? (
-          <Loading companyName={companyName || "company"}/>
-        )
-        :
-        (
         <main className="flex-1 flex flex-col items-center justify-center py-[30px] px-8">
           <div className="text-[15px] text-[var(--gold)] tracking-[2px] mb-2 border border-[var(--gold-border)] py-1 px-3.5 bg-[var(--gold-bg)] font-mono">
             COMPANY SCREENING TOOL
@@ -43,12 +42,11 @@ export default function SearchLandingPage() {
             ecosystem map, and Verity Intelligence fit score — replacing hours of manual research and data organization.
           </p>
 
-          <SearchBar setLoading={setLoading} setCompanyName={setCompanyName}/>
+          <SearchBar/>
 
           <StatsStrip />
         </main>
-        )
-      }
+
     </div>
   );
 }
