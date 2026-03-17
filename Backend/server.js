@@ -4,51 +4,77 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
 
-const { callA, callB } = require('./research/exaSearches');
+const { callA, callB, fillGaps } = require('./research/exaSearches');
+const { detectGaps } = require('./research/gapDetector');
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
 // ─────────────────────────────────────────────────────────────
-// Cache setup
+// Cache setup — two folders: exa/ and results/
+// Created on server start if they don't exist
 // ─────────────────────────────────────────────────────────────
 
 const CACHE_DIR = path.join(__dirname, '.cache');
+const EXA_CACHE_DIR = path.join(CACHE_DIR, 'exa');
+const RESULT_CACHE_DIR = path.join(CACHE_DIR, 'results');
 
-if (!fs.existsSync(CACHE_DIR)) {
-  fs.mkdirSync(CACHE_DIR, { recursive: true });
-  console.log('[Cache] Created .cache directory');
-} else {
-  console.log('[Cache] .cache directory ready');
-}
+[CACHE_DIR, EXA_CACHE_DIR, RESULT_CACHE_DIR].forEach(dir => {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+});
+console.log('[Cache] exa/ and results/ directories ready');
 
 function getCacheKey(company, descriptor) {
-  const key = `${company}_${descriptor || 'no-descriptor'}`
+  return `${company}_${descriptor || 'no-descriptor'}`
     .toLowerCase()
     .replace(/\s+/g, '-')
-    .replace(/[^a-z0-9-]/g, '');
-  return path.join(CACHE_DIR, `${key}.json`);
+    .replace(/[^a-z0-9-]/g, '') + '.json';
 }
 
-function readCache(company, descriptor) {
-  const file = getCacheKey(company, descriptor);
+function readExaCache(company, descriptor) {
+  const file = path.join(EXA_CACHE_DIR, getCacheKey(company, descriptor));
   if (!fs.existsSync(file)) return null;
   try {
     const data = JSON.parse(fs.readFileSync(file, 'utf8'));
-    console.log(`[Cache] HIT — ${path.basename(file)}`);
+    console.log(`[Exa Cache] HIT — ${path.basename(file)}`);
     return data;
   } catch {
-    console.log(`[Cache] Read error — ${path.basename(file)}`);
+    console.log(`[Exa Cache] Read error — ${path.basename(file)}`);
     return null;
   }
 }
 
-function writeCache(company, descriptor, data) {
-  const file = getCacheKey(company, descriptor);
+function writeExaCache(company, descriptor, data) {
+  const file = path.join(EXA_CACHE_DIR, getCacheKey(company, descriptor));
   fs.writeFileSync(file, JSON.stringify(data, null, 2));
-  console.log(`[Cache] SAVED — ${path.basename(file)}`);
+  console.log(`[Exa Cache] SAVED — ${path.basename(file)}`);
 }
+
+function readResultCache(company, descriptor) {
+  const file = path.join(RESULT_CACHE_DIR, getCacheKey(company, descriptor));
+  if (!fs.existsSync(file)) return null;
+  try {
+    const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+    console.log(`[Result Cache] HIT — ${path.basename(file)}`);
+    return data;
+  } catch {
+    console.log(`[Result Cache] Read error — ${path.basename(file)}`);
+    return null;
+  }
+}
+
+function writeResultCache(company, descriptor, data) {
+  const file = path.join(RESULT_CACHE_DIR, getCacheKey(company, descriptor));
+  fs.writeFileSync(file, JSON.stringify(data, null, 2));
+  console.log(`[Result Cache] SAVED — ${path.basename(file)}`);
+}
+
+// ─────────────────────────────────────────────────────────────
+// SSE helper
+// ─────────────────────────────────────────────────────────────
 
 function send(res, event) {
   res.write(`data: ${JSON.stringify(event)}\n\n`);
@@ -67,7 +93,17 @@ app.get('/', (req, res) => {
 });
 
 // ─────────────────────────────────────────────────────────────
-// POST /research/stream — SSE, Exa only
+// POST /research/stream — SSE pipeline
+// Steps:
+//   0 — Initializing research pipeline
+//   1 — Searching company profile & business model
+//   2 — Mapping competitive landscape
+//   3 — Identifying ecosystem relationships
+//   4 — Scanning news & sentiment signals
+//   5 — Checking for research gaps
+//   6 — Filling gaps (only fires if gaps found)
+//   7 — Research complete, ready for synthesis
+//   done — final data payload
 // ─────────────────────────────────────────────────────────────
 
 app.post('/research/stream', async (req, res) => {
@@ -83,90 +119,86 @@ app.post('/research/stream', async (req, res) => {
   res.flushHeaders();
 
   try {
-    send(res, { step: 0 }); // "Initializing research pipeline"
+    send(res, { step: 0 }); // Initializing research pipeline
 
-    const cached = readCache(company, descriptor);
+    // ── Check result cache first — skip everything if hit ──
+    const cachedResult = readResultCache(company, descriptor);
 
-    if (cached) {
-      console.log('[Stream] Cache hit — skipping Exa');
-      send(res, { step: 1 }); await sleep(200);
-      send(res, { step: 2 }); await sleep(200);
-      send(res, { step: 3 }); await sleep(200);
-      send(res, { step: 4 }); await sleep(200);
-      send(res, { step: 'done', data: cached });
+    if (cachedResult) {
+      console.log('[Stream] Result cache hit — skipping full pipeline');
+      send(res, { step: 1 }); await sleep(150);
+      send(res, { step: 2 }); await sleep(150);
+      send(res, { step: 3 }); await sleep(150);
+      send(res, { step: 4 }); await sleep(150);
+      send(res, { step: 5 }); await sleep(150);
+      send(res, { step: 7 });
+      send(res, { step: 'done', data: cachedResult, served_from_cache: 'result' });
       res.end();
       return;
     }
 
-    // Cache miss — fire both Exa calls in parallel
-    send(res, { step: 1 }); // "Searching company profile & business model"
-    const callAPromise = callA(company, descriptor);
-
-    send(res, { step: 2 }); // "Mapping competitive landscape"
-    const callBPromise = callB(company, descriptor);
-
-    const [commercialData, signalsData] = await Promise.all([callAPromise, callBPromise]);
-
-    send(res, { step: 3 }); // "Identifying ecosystem relationships"
-    await sleep(150);
-    send(res, { step: 4 }); // "Scanning news & sentiment signals"
-
-    const result = { commercialData, signalsData };
-    writeCache(company, descriptor, result);
-
-    send(res, { step: 'done', data: result });
-    res.end();
-
-  } catch (error) {
-    console.error('[Stream] Error:', error.message);
-    send(res, { step: 'error', message: error.message });
-    res.end();
-  }
-});
-
-// ─────────────────────────────────────────────────────────────
-// POST /research — original endpoint (keep for testing)
-// ─────────────────────────────────────────────────────────────
-
-app.post('/research', async (req, res) => {
-  const { company, descriptor } = req.body;
-
-  if (!company || company.trim() === '') {
-    return res.status(400).json({ error: 'Company name is required' });
-  }
-
-  console.log(`\n${'='.repeat(50)}`);
-  console.log(`New research request: ${company} ${descriptor || ''}`);
-  console.log(`${'='.repeat(50)}`);
-
-  try {
-    const startTime = Date.now();
+    // ── Phase 1 — Exa retrieval (check exa cache first) ───
     let commercialData, signalsData;
-    let servedFromCache = false;
+    const cachedExa = readExaCache(company, descriptor);
 
-    const cached = readCache(company, descriptor);
+    if (cachedExa) {
+      console.log('[Stream] Exa cache hit — skipping Exa calls');
+      commercialData = cachedExa.commercialData;
+      signalsData = cachedExa.signalsData;
 
-    if (cached) {
-      commercialData = cached.commercialData;
-      signalsData = cached.signalsData;
-      servedFromCache = true;
-      console.log('[Pipeline] Served from cache');
+      send(res, { step: 1 }); await sleep(150);
+      send(res, { step: 2 }); await sleep(150);
+      send(res, { step: 3 }); await sleep(150);
+      send(res, { step: 4 }); await sleep(150);
     } else {
-      [commercialData, signalsData] = await Promise.all([
-        callA(company, descriptor),
-        callB(company, descriptor),
-      ]);
-      writeCache(company, descriptor, { commercialData, signalsData });
+      console.log('[Stream] Exa cache miss — running parallel retrieval');
+
+      send(res, { step: 1 }); // Searching company profile
+      const callAPromise = callA(company, descriptor);
+
+      send(res, { step: 2 }); // Mapping competitive landscape
+      const callBPromise = callB(company, descriptor);
+
+      [commercialData, signalsData] = await Promise.all([callAPromise, callBPromise]);
+
+      send(res, { step: 3 }); // Identifying ecosystem relationships
+      await sleep(100);
+      send(res, { step: 4 }); // Scanning news & sentiment
+
+      writeExaCache(company, descriptor, { commercialData, signalsData });
     }
 
-    const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+    // ── Phase 2 — Gap detection ────────────────────────────
+    send(res, { step: 5 }); // Checking for research gaps
+    const gapResult = await detectGaps(company, commercialData, signalsData);
+    // const gapResult = []
 
-    return res.json({
+    // ── Phase 3 — Gap fill (conditional) ──────────────────
+    let gapData = [];
+
+    if (gapResult.gaps.length > 0) {
+      send(res, { step: 6 }); // Filling gaps
+      console.log(`[Stream] Filling ${gapResult.gaps.length} gap(s)...`);
+      gapData = await fillGaps(gapResult.gaps);
+    } else {
+      console.log('[Stream] No gaps detected — skipping gap fill');
+    }
+
+    send(res, { step: 7 }); // Research complete, ready for synthesis
+
+    // ── Build pipeline output ──────────────────────────────
+    // Claude synthesis will be added here next
+    // For now, return the full raw research data
+    const pipelineOutput = {
       status: 'exa_complete',
       company,
       descriptor: descriptor || null,
-      elapsed_seconds: elapsed,
-      served_from_cache: servedFromCache,
+      gap_detection: {
+        gaps_found: gapResult.gaps.length,
+        gaps: gapResult.gaps,
+        confidence: gapResult.confidence,
+        notes: gapResult.notes,
+      },
       results: {
         callA: {
           companyProfile: {
@@ -193,6 +225,14 @@ app.post('/research', async (req, res) => {
               preview: r.text?.slice(0, 200),
             })),
           },
+          ecosystem: {
+            count: commercialData.ecosystem?.results.length || 0,
+            results: (commercialData.ecosystem?.results || []).map(r => ({
+              title: r.title,
+              url: r.url,
+              preview: r.text?.slice(0, 200),
+            })),
+          },
         },
         callB: {
           news: {
@@ -214,12 +254,31 @@ app.post('/research', async (req, res) => {
             })),
           },
         },
+        gapFill: {
+          count: gapData.length,
+          results: gapData.map((r, i) => ({
+            query: gapResult.gaps[i],
+            count: r.results?.length || 0,
+            results: (r.results || []).map(x => ({
+              title: x.title,
+              url: x.url,
+              preview: x.text?.slice(0, 200),
+            })),
+          })),
+        },
       },
-    });
+    };
+
+    // NOTE: once Claude synthesis is added, save to result cache here:
+    // writeResultCache(company, descriptor, finalIntelligenceReport);
+
+    send(res, { step: 'done', data: pipelineOutput, served_from_cache: false });
+    res.end();
 
   } catch (error) {
-    console.error('[Pipeline] Error:', error.message);
-    return res.status(500).json({ error: 'Research pipeline failed', detail: error.message });
+    console.error('[Stream] Error:', error.message);
+    send(res, { step: 'error', message: error.message });
+    res.end();
   }
 });
 
