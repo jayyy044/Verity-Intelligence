@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const sampleCompanies = [
@@ -14,6 +14,26 @@ export default function SearchBar() {
   const [query, setQuery] = useState("");
   const [descriptor, setDescriptor] = useState("");
   const router = useRouter();
+  const typingTimersRef = useRef<number[]>([]);
+
+  const clearTypingTimers = () => {
+    for (const id of typingTimersRef.current) window.clearTimeout(id);
+    typingTimersRef.current = [];
+  };
+
+  const typeInto = (
+    text: string,
+    setter: (value: string) => void,
+    { startDelayMs = 0, charDelayMs = 20 }: { startDelayMs?: number; charDelayMs?: number } = {}
+  ) => {
+    const t = text ?? "";
+    for (let i = 0; i <= t.length; i++) {
+      const id = window.setTimeout(() => setter(t.slice(0, i)), startDelayMs + i * charDelayMs);
+      typingTimersRef.current.push(id);
+    }
+  };
+
+  useEffect(() => clearTypingTimers, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,8 +51,12 @@ export default function SearchBar() {
   };
 
   const handlePillClick = (company: string, desc: string) => {
-    setQuery(company);
-    setDescriptor(desc);
+    clearTypingTimers();
+    setQuery("");
+    setDescriptor("");
+
+    typeInto(company, setQuery, { charDelayMs: 40 });
+    typeInto(desc, setDescriptor, { charDelayMs: 30 });
   };
 
   return (

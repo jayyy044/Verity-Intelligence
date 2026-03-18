@@ -1,0 +1,289 @@
+{
+  "status": "exa_complete",
+  "company": "Wealthsimple",
+  "descriptor": "Canadian fintech wealth management investing",
+  "gap_detection": {
+    "gaps_found": 0,
+    "gaps": [],
+    "confidence": {
+      "company_profile": "High",
+      "funding": "High",
+      "competitors": "High",
+      "news": "High",
+      "founders": "High",
+      "ecosystem": "High"
+    },
+    "notes": "Data quality is excellent across all dimensions with strong mention rates and relevant results for Wealthsimple."
+  },
+  "results": {
+    "callA": {
+      "companyProfile": {
+        "count": 5,
+        "results": [
+          {
+            "title": "Wealthsimple",
+            "url": "https://en.wikipedia.org/wiki/Wealthsimple",
+            "preview": "Wealthsimple\n\nWealthsimple Inc. is a Canadian online investment management service. The firm was founded in September 2014 by Michael Katchen, Brett Huneycutt, and Rudy Adler and is based in Toronto. As of October 22, 2025, the firm holds over C$100 billion in assets under management. It is primaril"
+          },
+          {
+            "title": "Wealthsimple : mieux qu'une banque",
+            "url": "https://www.wealthsimple.com/",
+            "preview": "## Get up to a 3% match. Win a $3M home.\n\nIt’s our biggest, most unreal promo yet. But it’s totally real. Ends March 31. T&Cs apply.\n\nRegister now Learn more\n\n# Better than your bank\n\nGet the most out of your money with smart investing products and dedicated financial planning and advice services to"
+          },
+          {
+            "title": "What is Wealthsimple and How Does it Actually Work?",
+            "url": "https://www.wealthsimple.com/en-ca/magazine/how-does-wealthsimple-work",
+            "preview": "Finance for Humans\n\n# What is Wealthsimple and How Does it Actually Work?\n\nWhat we do, why we do it, and how it works.\n\nWritten ByThe Editors\nonApril 29, 2021\n\nWealthsimple makes powerful financial tools to help you grow and manage your money. Learn more\n\n### I’ve heard the name. But what do you act"
+          },
+          {
+            "title": "Who We Are | Wealthsimple",
+            "url": "https://www.wealthsimple.com/en-ca/about",
+            "preview": "# We’re on a mission to help everyone achieve financial freedom.\n\n## What we do\n\n### Rewrite old rules\n\nWe started Wealthsimple because investing in Canada felt like you needed a Ph.D to understand it. We set out to strip away the confusing jargon, hidden fees, and frustrating client experience to b"
+          },
+          {
+            "title": "Wealthsimple powers the next evolution of investing in Canada",
+            "url": "https://newsroom.wealthsimple.com/wealthsimple-powers-the-next-evolution-of-investing-in-canada",
+            "preview": "Wealthsimple powers the next evolution of investing in Canada\n\nProduct Company Research\n\nProduct\n\n# Wealthsimple powers the next evolution of investing in Canada\n\nOctober 22, 2025\n\nOctober 22, 2025 (Toronto, ON) — Today, Wealthsimple took investing in Canada to the next level. At the fall 2025 editi"
+          }
+        ]
+      },
+      "competitors": {
+        "count": 8,
+        "results": [
+          {
+            "title": "Keep More Of Your Money | Questrade",
+            "url": "https://www.questrade.com/",
+            "preview": "Keep More Of Your Money | Questrade window.targetGlobalSettings = { secureOnly: true,-- --\n\n# Canada's LeadingOnline Trading Platform\n\nInvest and trade smarter with $0 commissions and low fees across "
+          },
+          {
+            "title": "Invest with Qtrade Direct Investing | Qtrade",
+            "url": "https://www.qtrade.ca/",
+            "preview": "Invest with Qtrade Direct Investing | Qtrade\n\n# Plenty of cash back. No commission.\n\n- Trade with $0 commissions.\n- Get up to $5,000 cash back when you invest more*\n- Get $250 cash back when you inves"
+          },
+          {
+            "title": "Online broker for trading anytime, anywhere | Capitalcrest Limited",
+            "url": "https://www.capitalcrestlimited.com/",
+            "preview": "Online broker for trading anytime, anywhere | Capitalcrest Limited\n\nTrading for\n\n# Anyone Anywhere Anytime\n\nWidest range of products, markets, platforms with 24/7 customer support.\n\nTrader's Hub\n\nOpen"
+          },
+          {
+            "title": "Simplified Online Investing - RBC InvestEase",
+            "url": "https://www.rbcinvestease.com/",
+            "preview": "Simplified Online Investing - RBC InvestEase --\n\nRBC InvestEase / About Us --\n\nReady to Start Investing?\n\nOpen an Account\n\nGet up to 500,000 Avion Points and $300 Cash* When you open your first RBC In"
+          },
+          {
+            "title": "Online brokerage | NBDB",
+            "url": "https://nbdb.ca/",
+            "preview": "Online brokerage | NBDB\n\nCanada Post service disruption: Certain mail delivery delays may occur. Discover our digital documents offer to help you avoid any interruptions.\n\n# We make simple look smart\n"
+          },
+          {
+            "title": "Online Wealth Management Platform\n    | CI Direct Investing",
+            "url": "https://www.cidirectinvesting.com/",
+            "preview": "Online Wealth Management Platform | CI Direct Investing\n\n# Investing & Trading for the 100%\n\nWhether you’ve got $1,000 or $1 million, we make accessing professionally managed investments or self-direc"
+          },
+          {
+            "title": "SmartFolio: Online Investing - BMO Canada",
+            "url": "https://www.bmo.com/en-ca/main/personal/investments/direct-investing/smartfolio/",
+            "preview": "SmartFolio: Online Investing - BMO Canada\n\nNavigation skipped\n\n# SmartFolio\n\nSmartFolio brings together the convenience of online investing, professional portfolio management and low fees to save you "
+          },
+          {
+            "title": "adviceDirect: Online Hybrid Trading Platform – BMO Canada",
+            "url": "https://www.bmo.com/en-ca/main/personal/investments/direct-investing/investorline/advicedirect/",
+            "preview": "adviceDirect: Online Hybrid Trading Platform – BMO Canada\n\nNavigation skipped\n\n# BMO InvestorLine adviceDirect\n\nAn investing platform that combines online investing with personalized advice and suppor"
+          }
+        ]
+      },
+      "funding": {
+        "count": 6,
+        "results": [
+          {
+            "title": "Power Financial Reports Third Quarter 2020 Financial Results",
+            "url": "http://www1.newswire.ca/news-releases/power-financial-reports-third-quarter-2020-financial-results-899575141.html",
+            "preview": "Power Financial Reports Third Quarter 2020 Financial Results Accessibility Statement Skip Navigation\n\nReaders are referred to the sections \"Non-IFRS Financial Measures and Presentation\" and \"Forward-L"
+          },
+          {
+            "title": "Wealthsimple hits $10-billion valuation in new round backed by Dragoneer, GIC, CPP Investments | BetaKit",
+            "url": "https://betakit.com/wealthsimple-hits-10-billion-valuation-in-new-round-backed-by-dragoneer-gic-cpp-investments/",
+            "preview": "Wealthsimple hits $10-billion valuation in new round backed by Dragoneer, GIC, CPP Investments | BetaKit\n\nCanadian Tech & Startup News\n\nCanadian Tech & Startup News\n\nWealthsimple co-founder and CEO Mi"
+          },
+          {
+            "title": "Wealthsimple announces $750 million equity round at $10 billion post-money valuation to accelerate growth",
+            "url": "http://www.prnewswire.com/news-releases/wealthsimple-announces-750-million-equity-round-at-10-billion-post-money-valuation-to-accelerate-growth-302595799.html",
+            "preview": "Wealthsimple announces $750 million equity round at $10 billion post-money valuation to accelerate growth Accessibility Statement Skip Navigation\n\n- With a profitable and growing business, new capital"
+          },
+          {
+            "title": "Wealthsimple raises $50M in new funding; announces $1B in assets under administration",
+            "url": "https://www.newswire.ca/news-releases/wealthsimple-raises-50m-in-new-funding-announces-1b-in-assets-under-administration-622030313.html",
+            "preview": "Wealthsimple raises $50M in new funding; announces $1B in assets under administration Accessibility Statement Skip Navigation\n\n--\n\nUser-friendly investing service secures new funding from Power Financ"
+          },
+          {
+            "title": "Wealthsimple announces $750 million investment at a $5 billion valuation to build Canada’s leading consumer finance brand",
+            "url": "http://www.newswire.ca/news-releases/wealthsimple-funding-announcement-q2-2021-866613230.html",
+            "preview": "Wealthsimple announces $750 million investment at a $5 billion valuation to build Canada’s leading consumer finance brand Accessibility Statement Skip Navigation\n\n- Wealthsimple will use new capital t"
+          },
+          {
+            "title": "Wealthsimple raises $65 million in funding from Power Financial group of companies",
+            "url": "http://www.newswire.ca/news-releases/wealthsimple-raises-65-million-in-funding-from-power-financial-group-of-companies-674687383.html",
+            "preview": "Wealthsimple raises $65 million in funding from Power Financial group of companies Accessibility Statement Skip Navigation\n\n--\n\nFast-growing Canadian financial technology company now serves 65,000+ cl"
+          }
+        ]
+      },
+      "ecosystem": {
+        "count": 6,
+        "results": [
+          {
+            "title": "Why Wealthsimple went from preaching low-fee, low-risk investing to pushing stock trading and crypto - The Globe and Mail",
+            "url": "http://web.theglobeandmail.com/business/article-why-wealthsimple-went-from-preaching-low-fee-low-risk-investing-to/",
+            "preview": "Why Wealthsimple went from preaching low-fee, low-risk investing to pushing stock trading and crypto - The Globe and Mail\n\nWhy Wealthsimple went from preaching low-fee, low-risk investing to pushing s"
+          },
+          {
+            "title": "Wealthsimple expands capabilities again with new partnership | Wealth Professional",
+            "url": "https://www.wealthprofessional.ca/news/industry-news/wealthsimple-expands-capabilities-again-with-new-partnership/390802",
+            "preview": "Wealthsimple expands capabilities again with new partnership | Wealth Professional\n\nCONTINUE TO SITE\n\nCONTINUE TO SITE\n\n# Wealthsimple expands capabilities again with new partnership\n\nThe financial se"
+          },
+          {
+            "title": "Broadridge - Broadridge Partners with Wealthsimple To Enter the Robo-Advisory Market | Broadridge",
+            "url": "https://www.broadridge.com/press-release/2017/broadridge-partners-with-wealthsimple-to-enter-the-robo-advisory-market",
+            "preview": "-- Broadridge - Broadridge Partners with Wealthsimple To Enter the Robo-Advisory Market | Broadridge\n\n# Broadridge Partners with Wealthsimple To Enter the Robo-Advisory Market\n\nNew partnership brings "
+          },
+          {
+            "title": "Broadridge Partners with Wealthsimple To Enter the Robo-Advisory Market",
+            "url": "https://www.newswire.ca/news-releases/broadridge-partners-with-wealthsimple-to-enter-the-robo-advisory-market-662052843.html",
+            "preview": "Broadridge Partners with Wealthsimple To Enter the Robo-Advisory Market Accessibility Statement Skip Navigation\n\nNew partnership brings next-generation fintech investing to financial institutions and "
+          },
+          {
+            "title": "Wealthsimple's Transaction Strengthens Their Growth Trajectory and Demonstrates Value to IGM Financial Shareholders",
+            "url": "http://www.newswire.ca/news-releases/wealthsimple-s-transaction-strengthens-their-growth-trajectory-and-demonstrates-value-to-igm-financial-shareholders-834093744.html",
+            "preview": "Wealthsimple's Transaction Strengthens Their Growth Trajectory and Demonstrates Value to IGM Financial Shareholders Accessibility Statement Skip Navigation\n\nValue of IGM's investment in Wealthsimple i"
+          },
+          {
+            "title": "Power Corporation Announces Additional Investment in Wealthsimple",
+            "url": "http://www.newswire.ca/en/releases/archive/October2025/27/c6795.html",
+            "preview": "Power Corporation Announces Additional Investment in Wealthsimple Accessibility Statement Skip Navigation\n\nReaders are referred to the section Forward-Looking Statements at the end of this release.\n\nM"
+          }
+        ]
+      }
+    },
+    "callB": {
+      "news": {
+        "count": 9,
+        "results": [
+          {
+            "title": "Mackenzie Investments Announces March 2026 Quarterly Distributions for its Exchange Traded Funds",
+            "url": "https://www.newswire.ca/news-releases/mackenzie-investments-announces-march-2026-quarterly-distributions-for-its-exchange-traded-funds-861407718.html",
+            "published": "2026-03-16",
+            "highlights": [
+              "the March 2026 quarterly cash distributions for its equity Exchange Traded Funds (\"ETFs\") listed below that trade on the Toronto Stock Exchange (TSX) and Cboe Canada. Unitholders of record on March 23, 2026 will receive cash distributions payable on March 30, 2026.  ...    Mackenzie International Equity Index ETF\n\nQDX\n\n$ 0.75911\n\nCAD\n\n55455T100\n\nCA55455T1003\n\nQuarterly\n\nTSX Mackenzie International Equity Index ETF (CAD-Hedged)\n\nQDXH\n\n$ 0.84783\n\nCAD\n\n55455Y109\n\nCA55455Y1097\n\nQuarterly\n\nTSX Wealthsimple North America Socially Responsible Index ETF\n\nWSRI\n\n$ 0.13518\n\nCAD\n\n94701L108\n\nCA94701L1085\n\nQuarterly TSX\n\nWealthsimple Developed Markets ex North America Socially Responsible Index ETF\n\nWSRD\n\n$ 0.03873\n\nCAD\n\n94701J103 CA94701J1030\n\nQuarterly\n\nTSX\n\nMackenzie Developed Markets Real Estate Index ETF\n\nQRET\n\n$ 0.83187\n\nCAD\n\n55454K100  ...    Mackenzie Growth Allocation ETF\n\nMGRW\n\n$ 0.12692\n\nCAD\n\n554570101\n\nCA5545701016\n\nQuarterly\n\nTSX Wealthsimple Shariah World Equity Index ETF\n\nWSHR\n\n$ 0.04718\n\nCAD\n\n94701W104\n\nCA94701W1041\n\nQuarterly\n\nCboe Canada Mackenzie All-Equity Allocation ETF\n\nMEQT\n\n$ 0.09331\n\nCAD\n\n55452A104\n\nCA55452A1049\n\nQuarterly\n\nTSX Further information about Mackenzie ETFs can be found at mackenzieinvestments.com. Commissions, management fees, brokerage fees and expenses all may be associated with Exchange Traded Funds. Please read the prospectus before investing. Exchange Traded Funds are not guaranteed, their values change frequently and past  ...    below zero. About Mackenzie InvestmentsMackenzie Investments (\"Mackenzie\") is a Canadian investment management firm with approximately $256 billion in assets under management as of February 28, 2026. Mackenzie seeks to create a more invested world by delivering strong investment performance and offering innovative portfolio solutions and related services to more than one million retail and institutional clients through multiple distribution channels. Founded in 1967, it is a global asset manager with offices across Canada as well as in Beijing, Boston, Dublin, Hong Kong and London. Mackenzie is a member of IGM Financial Inc. (TSX: IGM), part of the Power Corporation group of companies and one of Canada's leading diversified wealth and asset management organizations with approximately $326 billion in total  ...    English Media Inquiries, Jaimie Roebuck, 647-629-2747, [[email protected]]; French Media Inquiries, Hiba Al Mondalek, 438-969-8234, [[email protected]] ## Organization Profile\n\n### Mackenzie Financial Corporation\n\nAlso from this source Mackenzie Investments Announces February 2026 Distributions for its Exchange Traded Funds Mackenzie Investments Announces January 2026 Distributions for its Exchange Traded Funds [Mackenzie Investments Announces Revised Final Year-End Reinvested Dist"
+            ],
+            "preview": "Mackenzie Investments Announces March 2026 Quarterly Distributions for its Exchange Traded Funds Accessibility Statement Skip Navigation\n\nTORONTO, March 16, 2026 /CNW/ - Mackenzie Investments (\"Macken"
+          },
+          {
+            "title": "Household net worth grew in Q4 as savings rate softened | Investment Executive",
+            "url": "https://www.investmentexecutive.com/news/household-net-worth-grew-in-q4-as-savings-rate-softened/",
+            "published": "2026-03-16",
+            "highlights": [
+              "households’ wealth grew by $230 billion in the fourth quarter of 2025, ending the year at $18.6 trillion — adding more than $1 trillion (5.8%) in wealth for the year, according to Statistics Canada. Appreciating financial assets, which grew 10.5% year-over-year, spurred the wealth growth. The S&P/TSX Composite Index increased by 5.6% in the fourth quarter of 2025, closing out the year 28.2% higher than its 2024 year-end level, the  ...    Canadians reinvested earnings to buy more mutual funds, with a record quarterly net acquisition of $96.2 billion in the  ...    At the end of 2025, our national net worth was $19.3 trillion. Canada’s national wealth was up $88.3 billion in the fourth quarter, buoyed by an increase in natural resources values. The value of metallic and non-metallic mineral  ...    $94 billion in 2024. At the same time, demand for non-mortgage debt eased, with total borrowing of $30.7 billion in 2025 compared with $43.5 billion the year prior. Consumer credit demand fell 23.7%. ## Latest news In Research and Markets\n\n### Stock markets fall as oil prices continue to rise Investors sift through \"ugly\" jobs report in Canada, U.S. economic data - 17:08\n- March 13, 2026 March 13, 2026\n- By: Daniel Johnson, The Canadian Press ### China positions itself as force for global stability at its annual Congress Five-year plan doubles down on tech investment for growth - 11:52\n- March 13, 2026 March 13, 2026\n- By: Ken Moritsugu, The Associated Press  ...    - 10:46\n- March 13, 2026 March 13, 2026\n- By: The Canadian Press\n\n## Today's top stories ### CIFP ends offer of financial-planning credential on equivalency basis — for now Whether FSRA deems title protection’s minimum standards to confer equivalency is unclear - 10:50\n- March 16, 2026 March 16, 2026\n- By: Michelle Schriver ### CMHC reports February housing starts up 4.5% from January 'Tepid' bounce-back unlikely to change overall cooling trend: economist - 13:49\n- March 16, 2026 March 16, 2026\n- By: Sammy Hudes, The Canadian Press ### As Wealthsimple joins Swift, other fintechs unlikely to follow Neo, Koho have different strategies, but say move adds to fintechs' legitimacy - 13:58\n- March 16, 2026 March 16, 2026\n- By: Jonathan Got ### Re: Scale, specialization and personalization will define wealth management \"Fewer firms with greater scale means reduced competitive pressure, higher switching costs and diminished client leverage\" writes Harvey Naglie - 12:34\n- March 16, 2026 March 16, 2026\n- By: Harvey Naglie"
+            ],
+            "preview": "Household net worth grew in Q4 as savings rate softened | Investment Executive\n\nHome News Industry News Household net worth grew in Q4 as savings rate softened\n\niStockphoto\n\nJonathan Got\n\nCanadian hou"
+          },
+          {
+            "title": "Wealthsimple powers the next evolution of investing in Canada",
+            "url": "https://newsroom.wealthsimple.com/wealthsimple-powers-the-next-evolution-of-investing-in-canada",
+            "published": "2025-10-22",
+            "highlights": [
+              "Wealthsimple powers the next evolution of investing in Canada\n\nOctober 22, 2025 October 22, 2025 (Toronto, ON) — Today, Wealthsimple took investing in Canada to the next level. At the fall 2025 edition of Wealthsimple Presents: For Nerds Only, the company announced a new suite of products designed to give Canadians every advantage possible to grow their wealth. Wealthsimple Presents: For Nerds Only saw more than 220,000 Canadians register for the livestream, double the amount of registrants for End of Banking? in June. Hundreds of clients, industry leaders, and other investing nerds attended in person at Evergreen Brick Works in Toronto. Over the past decade, Wealthsimple has evolved into a full-stack financial platform, empowering Canadians to invest, save, and spend on their own terms. Fuelled by Canadians’ growing demand for innovative financial solutions, Wealthsimple announced that it hit $100 billion in total assets under administration, a major milestone that it achieved three years ahead of its original goal of December 2028. The latest additions to Wealthsimple’s product suite — including zero-commission options, fractional ownership of physically-backed gold, direct indexing, the mutual fund exchange, the Retirement Accelerator, and the Summit Portfolio  ...    A recent study that surveyed 1,000 Wealthsimple clients with $50,000+ in investable assets (ages 25–45), shows just how  ...    Wealthsimple’s clients already benefit from managed portfolios, self-directed investing, tax-optimized ETFs, crypto trading, and more. Now, responding to investors’ demand for more sophisticated tools and strategies, the company is adding new products and features with the most competitive fees in Canada. Starting today, Wealthsimple clients will have access to: - Full-service wealth management: Clients can now access sophisticated advice typically reserved for family offices — but for less. Unlike traditional firms that require millions to get started, Wealthsimple’s service is available to clients with as little as $100,000 to invest. As a client’s wealth grows, their fee drops to as low as 0.5% — about  ...    - Zero-commission options: Wealthsimple will be the first and only brokerage in Canada to offer true zero-commission  ...    ### Coming soon Wealthsimple will continue to roll out its new investing products and features through 2026, including: - AI research trading features: Clients will soon have access to an AI-powered research-and-trading dashboard built to  ...    companies with earnings reports this week”), analyze performance patterns, and get concise summaries of market drivers. It’s designed to deliver actionable insights—faster—while helping investors understand not just what’s moving, but why.  ...    - Summit portfolio: The most advanced portfolio Wealthsimple has ever built. Meant for long-term investors, the  ...    more in investable assets. About Wealthsimple Wealthsimple is one of Canada’s fastest-growing and most trusted money management platforms. The company offers a full suite of simple, sophisticated financial products across managed investing, do-it-yourself trading, cryptocurrency, tax filing, spending, and saving. Wealthsimple currently serves more than 3 million Canadians and holds $100 billion in assets under administration. The company was founded in 2014 by a team of financial experts and technology  ...    suite of simple, sophisticated financial products across managed investing,"
+            ],
+            "preview": "Wealthsimple powers the next evolution of investing in Canada\n\nProduct Company Research\n\nProduct\n\n# Wealthsimple powers the next evolution of investing in Canada\n\nOctober 22, 2025\n\nOctober 22, 2025 (T"
+          },
+          {
+            "title": "Wealthsimple launches RRSP loans as fintech pushes into retirement planning - The Globe and Mail",
+            "url": "http://globeandmail.com/investing/personal-finance/retirement/article-wealthsimple-launches-rrsp-loans-as-fintech-pushes-into-retirement/",
+            "published": "2025-10-22",
+            "highlights": [
+              "loans as fintech pushes into retirement planning - The Globe and Mail Wealthsimple launches RRSP loans as fintech pushes into retirement planning\n\nMeera Raman Published October 22, 2025\n\nOpen this photo in gallery: The Wealthsimple app on a smartphone.Giordano Ciampini/The Canadian Press\n\nShare\n\nSave for later Wealthsimple is introducing a new take on loans for RRSPs, part of the Toronto-based fintech’s broader push into retirement planning. The loan product was announced Wednesday at an event unveiling a suite of new investment offerings. It is intended to help Canadians invest earlier in life, at a time when traditional paths to retirement and building wealth, such as homeownership, are increasingly out of reach for many, the company said. “The opportunity to actually have the biggest return on leverage is actually when you’re younger,” said Paul Teshima, Wealthsimple’s chief commercial officer, in an interview ahead of the event. “But it’s actually backwards because  ...    Wealthsimple hits $100-billion in assets as investors plough money into discount brokerage accounts The RRSP loan is Wealthsimple’s first product under a larger initiative the company calls its “retirement accelerator.” It is expected to launch in the first quarter of 2026, and interested clients must work with a Wealthsimple adviser. The company did not share information about other products under the initiative. An RRSP loan allows an individual to borrow money to contribute to that registered plan, helping them maximize their contribution room and benefit from a larger tax refund. Generally, if the RRSP’s growth rate is higher than the interest rate of the loan, taking out a loan can make financial sense. At major banks, RRSP loans are typically not secured against existing assets and based on a borrower’s credit history, with approval and loan size tied to their credit score. Wealthsimple is taking a different approach: Its loans will be backed by a client’s existing investments rather than their credit history. This structure, known as a restricted margin loan, is collateralized by the client’s assets, such as those held in non-registered or tax-free savings accounts. This can make it easier for people without Canadian credit scores, such as  ...    “What that allows you to do is basically borrow against your assets, unlocking the value of those assets and investing into the RRSP at a lower interest rate,” said Swapnil Parikh, vice-president of product at Wealthsimple. A summer camp for grown-ups trying to escape the work force forever with FIRE  ...    “That is particularly important because the last thing you want is a margin on your RRSP that might require you to sell  ...    Partners in Markham, Ont. Generally, RRSP loans let an individual borrow as much as $50,000 with a term of five to 10 years, according to rate comparison site Ratehub.ca. “I haven’t seen that limit move much in the last 20 years,” Mr. Heath said. Wealthsimple plans to change that. For example, a client with $1-million in diversified ETFs spread across a  ...    Repayment terms will also be more flexible than at traditional institutions, Mr. Parikh said. Borrowers can make monthly or lump-sum payments or pay on an ad hoc basis. Wealthsimple expects most clients will use their tax refunds to  ...    If a borrower is unable to repay the loan, Wealthsimple said, there are two options: move existing investments into  ...    Interest rates will range from 4.2 to 5.2 per cent, depending on the client’s assets, and fluctuate with the Bank of Canada’s overnight rate. Traditional RRSP loans are often around the prime rate, which is currently at 4.7 per cent; for example, CIBC‘s RRSP loan currently has an interest rate of prime plus 1 per cent. “If you’re borrowing at 5 per cent and investing at 5 per cent, it’s sort of a wash,” Mr. Heath said. “You always need  ...    Report an editorial error\n\nReport a technical issue\n\nEditorial code of conduct ## Go Deeper\n\n- Tools & Calculators\n-"
+            ],
+            "preview": "Wealthsimple launches RRSP loans as fintech pushes into retirement planning - The Globe and Mail\n\nWealthsimple launches RRSP loans as fintech pushes into retirement planning\n\nMeera Raman\n\nPublished Oc"
+          },
+          {
+            "title": "Wealthsimple Launches Gold Trading as It Surpasses $100 Billion Milestone",
+            "url": "https://startupnews.fyi/2025/10/23/wealthsimple-launches-gold-trading-as-it-surpasses-100-billion-milestone/",
+            "published": "2025-10-23",
+            "highlights": [
+              "Gitex & Expand North Star – World’s Largest Startup Investor Connect] Sign in\n\nWelcome! Log into your account\n\nyour username\n\nyour password\n\nForgot your password? Get help  ...    - Blockchain\n- Tech\n- Fintech\n- AI - Mobility\n- Funding\n- Edtech\n- Government\n- eCommerce - Blockchain\n- Tech\n- Fintech\n- AI # Wealthsimple Launches Gold Trading as It Surpasses $100 Billion Milestone\n\nOctober 23, 2025, By Team SNFYI\n\nBusiness and Finance\n\nShare via:\n\nFacebook\n\nTwitter WhatsApp\n\nLinkedin\n\n## Canadian Fintech Giant Expands into Advanced Investment Offerings Wealthsimple, Canada’s leading fintech platform, has reached a major milestone—$100 billion CAD in assets under administration (AUA)—and is marking the occasion with the launch of Wealthsimple gold trading alongside a suite of advanced investing tools. Announced during the company’s “Wealthsimple Presents: For Nerds Only” showcase in Toronto, the new features mark a significant evolution for the firm, moving it beyond its roots as a simple robo-advisor into a comprehensive digital  ...    “We’re returning to our roots—focusing on innovation and making sophisticated investing accessible to everyone,” said  ...    directly in Canadian dollars, with no-cost storage and optional home delivery. This marks Wealthsimple’s first foray  ...    Investors can now diversify their portfolios by adding gold—a long-time inflation hedge—without leaving the  ...    it has evolved into a multi-service platform offering banking, investing, and crypto solutions. Now valued at over $5 billion, the company serves more than 3 million clients across Canada. The firm’s journey from automation to innovation is evident in its latest product push. It took Wealthsimple ten years  ...    Mobile February 26, 2026\n\n### Leaker Says Apple’s Lower-Cost MacBook Will Have These 8 Limitations Apple February 26, 2026\n\nLoad more # Wealthsimple Launches Gold Trading as It Surpasses $100 Billion Milestone\n\nOctober 23, 2025, Published By Team SNFYI\n\nBusiness and Finance\n\nFacebook\n\nTwitter WhatsApp\n\nLinkedin\n\n## Canadian Fintech Giant Expands into Advanced Investment Offerings Wealthsimple, Canada’s leading fintech platform, has reached a major milestone—$100 billion CAD in assets under administration (AUA)—and is marking the occasion with the launch of Wealthsimple gold trading alongside a suite of advanced investing tools. Announced during the company’s “Wealthsimple Presents: For Nerds Only” showcase in Toronto, the new features mark a significant evolution for the firm, moving it beyond its roots as a simple robo-advisor into a comprehensive digital wealth management ecosystem. “We’re returning to our roots—focusing on innovation and making sophisticated investing accessible to everyone,” said  ...    Among the standout new features is Wealthsimple’s gold trading, which allows users to buy and sell physical gold directly in Canadian dollars, with no-cost storage and optional home delivery. This marks Wealthsimple’s first foray  ...    Investors can now diversify their portfolios by adding gold—a long-time inflation hedge—without leaving the  ...    The firm’s journey from automation to innovation is evident in its latest product push. It took Wealthsimple ten years  ...    Wealthsimple’s expansion into"
+            ],
+            "preview": "Wealthsimple Launches Gold Trading as It Surpasses $100 Billion Milestone\n\n- Advertise With Us\n- Funding Tracker\n- Dubai Delegation\n- Startup Events\n\nSearch\n\n- 10th Indian Delegation to Dubai, Gitex &"
+          },
+          {
+            "title": "Wealthsimple unveils advanced investing tools as it hits $100-billion milestone | BetaKit",
+            "url": "https://betakit.com/wealthsimple-hits-100-billion-milestone-unveils-new-suite-of-advanced-investing-tools/",
+            "published": "2025-10-22",
+            "highlights": [
+              "surpasses $100 billion in AUA, Toronto firm aims to bolster investing with lower fees, diversification, and AI. Wealthsimple has unveiled a suite of products and services meant to give its customers more advanced investing options and tools at a lower cost. A growing share of Canadians “are ‘nerding out’ on investing like never before.” These range from zero-commission options contracts and cheaper cryptocurrency trading to the ability to buy and sell gold, access direct indexing, mutual fund exchange, a portfolio featuring alternative investments, loans to help maximize RRSP contributions, and artificial intelligence (AI) stock research tools. The announcements come as Wealthsimple reveals a major milestone: the Toronto FinTech firm has now surpassed $100 billion CAD in total assets under administration (AUA). Wealthsimple hit the milestone three years ahead of its original December 2028 target, after growing 37 percent since March 31. Wealthsimple shared the news today from Evergreen Brick Works in Toronto, during the second product showcase in its new Wealthsimple Presents series, which it dubbed “For Nerds Only.” The inaugural edition, held earlier this year, saw Wealthsimple reveal a slew of banking products that included a credit card, instant line of credit, and expanded chequing account. With many of those offerings available either now or very soon, Wealthsimple has shifted its attention to sharing the  ...    Wealthsimple started in 2014 as a robo-adviser. Many at the time saw Wealthsimple as a product only for beginners, early investors, and younger people. Since then, the company has broadened its investment capabilities and moved into other areas of money management, like banking. It has also wooed wealthier clients and more sophisticated traders as part of its quest to build “a full-service financial solution” for Canadians. Now, the 11-year-old company  ...    RELATED: Wealthsimple reveals first credit card, expanded chequing account at inaugural product showcase  ...    As Wealthsimple looks to once again level up its investment capabilities to meet that demand, Teshima argued that there are three fundamentals to a successful investing strategy: low fees, diversification, and leverage. Today’s announcements fall into those three categories. As it looks to lower fees, Wealthsimple claims it is now the first and only brokerage in Canada to offer true zero-commission options contracts, after eliminating its per-contract fees. The company is also launching a new volume-based, discounted fee structure for crypto trading. These capabilities, which come in addition to the  ...    “We believe that we need to continue to innovate in the world of investing, and AI is going to be part of that.”  ...    platform, cover the transfer fees, and charge lower fees. In early 2026, the company intends to launch Norbert’s Gambit, an oft-requested currency conversion technique to help  ...    Wealthsimple is betting these moves will help it both lure new clients and convince existing customers to bring more  ...    as “complex on the inside [but] simple to the user.”​​ The company says this could help clients outperform market  ...    By the end of 2025, Wealthsimple also intends to provide more advanced option strategies and launch its Summit portfolio, an advanced offering for long-term investors with exposure to private equity and private credit. RELATED: [Wealthsimple’s Brett Huneycutt explains how its new products advance the company’s financial services  ...    With regard to leverage, Wealthsimple intends to roll out Retirement Accelerator low-interest loans to help investors maximize their registered retirement savings plan (RRSP) contributions in early 2026. Thanks in part to its acquisition of Montréal’s Fey earlier this year, Wealthsimple also plans to roll out an AI-powered investment research and trading dashboard to help clients find relevant stocks, analyze performance, and summarize market drivers. RELATED:"
+            ],
+            "preview": "Wealthsimple unveils advanced investing tools as it hits $100-billion milestone | BetaKit\n\nCanadian Tech & Startup News\n\nCanadian Tech & Startup News\n\nAs it surpasses $100 billion in AUA, Toronto firm"
+          },
+          {
+            "title": "Wealthsimple's Transaction Strengthens Their Growth Trajectory and Demonstrates Value to IGM Financial Shareholders",
+            "url": "http://www1.newswire.ca/news-releases/wealthsimple-s-transaction-strengthens-their-growth-trajectory-and-demonstrates-value-to-igm-financial-shareholders-834093744.html",
+            "published": "2025-10-27",
+            "highlights": [
+              "billion WINNIPEG, MB, Oct. 27, 2025 /CNW/ - IGM Financial Inc.(\"IGM\" or \"the Company\") (TSX: IGM), one of Canada's leading diversified wealth and asset management companies, today released details related to Wealthsimple's announcement of a financing round of up to $750 million. The transaction consists of a $550 million primary offering and a secondary offering of up to $200 million. It is co-led by GIC and Dragoneer and will allow Wealthsimple to accelerate its growth. Other investors include new investor CPP Investments, and existing investors IGM, Power Corporation of Canada, ICONIQ, Greylock and Meritech. As a result of today's announcement, IGM will increase the fair value of its investment in Wealthsimple by $680 million or 46 per cent ($2.87 per IGM share), from $1.48 billion to $2.16 billion. Further:  ...    \"Wealthsimple has rapidly established themselves as the leading innovator in Canada's financial services industry,\" said James O'Sullivan, President & CEO, IGM Financial. \"They recently crossed $100 billion in assets under administration, which is a remarkable achievement by any standard. Today's announcement is the latest example of its  ...    This transaction further validates IGM's approach to its strategic investments, which include high-growth wealth management businesses such as Wealthsimple and Rockefeller Capital Management and asset managers China Asset Management Co., Ltd. and Northleaf Capital Partners. These investments complement IGM's core operating companies, IG Wealth  ...    The transaction is subject to customary closing conditions and is expected to close in the fourth quarter of 2025.  ...    ABOUT IGM FINANCIAL INC. IGM Financial Inc. (\"IGM\", TSX: IGM) is a leading Canadian diversified wealth and asset management organization with approximately $303 billion in total assets under management and advisement as of September 30, 2025. The company is committed to bettering the lives of Canadians by better planning and managing their money. To achieve this, IGM provides a broad range of financial planning and investment management services to help approximately two million Canadians meet their financial goals. IGM's activities are carried out principally through IG Wealth Management and Mackenzie Investments and are complemented by strategic positions in wealth managers Rockefeller Capital Management and Wealthsimple and asset managers ChinaAMC and Northleaf Capital. These strengthen IGM's capabilities, reach and diversification. IGM is a member of the Power Corporation group of companies. For more information, visit  ...    ABOUT WEALTHSIMPLE Wealthsimple is one of Canada's fastest-growing and most trusted money management platforms. The company offers a full suite of simple, sophisticated financial products across managed investing, do-it-yourself trading, cryptocurrency, tax filing, spending, and saving. Wealthsimple currently serves more than 3 million Canadians and holds $100 billion in assets under administration. The company was founded in 2014 by a team of financial experts  ...    IGM FINANCIAL ANNOUNCES LEADERSHIP CHANGES THAT PROVIDE CONTINUITY AND BUILD ON MOMENTUM [IGM FINANCIAL REPORTS RECORD FOURTH QUARTER AND FULL YEAR 2025 ADJUSTED EARNINGS AND ANNOUNCES DIVIDEND INCREASE OF  ...    [IGM FINANCIAL INC. ANNOUNCES JANUARY 2026 ASS"
+            ],
+            "preview": "Wealthsimple's Transaction Strengthens Their Growth Trajectory and Demonstrates Value to IGM Financial Shareholders Accessibility Statement Skip Navigation\n\nValue of IGM's investment in Wealthsimple i"
+          },
+          {
+            "title": "Wealthsimple announces $750 million equity round at $10 billion post-money valuation to accelerate growth",
+            "url": "http://www.prnewswire.com/news-releases/wealthsimple-announces-750-million-equity-round-at-10-billion-post-money-valuation-to-accelerate-growth-302595799.html",
+            "published": "2025-10-27",
+            "highlights": [
+              "capital will accelerate Wealthsimple's product roadmap and deepen the  ...    - Dragoneer and GIC co-lead investment alongside CPP Investments, Power Corporation of Canada, IGM Financial Inc.,  ...    TORONTO, Oct. 27, 2025 /PRNewswire/ - Wealthsimple, Canada's leading financial innovator, today announced it has signed an equity round of up to CAD $750 million at a post-money valuation of CAD $10 billion. The round, which includes both a $550 million primary offering and a secondary offering of up to $200 million, is co-led by Dragoneer Investment Group and GIC, and signals deep conviction from world-renowned investors in Wealthsimple's role as the future of financial services in Canada. Other investors include new investor Canada Pension Plan Investment Board (CPP Investments), and  ...    Since 2014, Wealthsimple has consistently set the pace for innovation in Canadian finance and reimagined how Canadians build wealth. The company broke down barriers to the markets for a new generation of investors with its managed and self-directed investing platforms and led the charge on many investing firsts for the country, including commission-free trading, regulated crypto trading and 24/5 trading. It has also redesigned everyday banking, with features such as bank draft delivery and automatic paycheque allocation, and a competitive chequing account with no monthly, foreign exchange or ATM withdrawal fees. What began as a simple investing app has become a trusted financial platform that millions of Canadians use to grow and manage their money, whether they're just starting out, or managing  ...    The equity round comes after an explosive few years for Wealthsimple and the company continues to scale from a position  ...    This latest capital raise will accelerate its roadmap across investing, spending and credit, support strategic  ...    Canadian company,\" said Michael Katchen, CEO and co-founder, Wealthsimple. \"We were intentional in choosing partners committed to the long-term future of Wealthsimple. These are well-respected, global leaders with a proven track record  ...    low-cost financial tools that empower Canadians to build wealth in whatever way works for them. The platform brings together self-directed investing, managed portfolios, digital assets, spending, tax filing, and advisor services into one simple, integrated experience. The company is also responsible for building Canada's most-read financial newsletter, TLDR, educating four million weekly subscribers on money and market news. This year, the company launched a waitlist for its first credit card, surpassing 300,000 Canadians in the first six months. The company also launched Wealthsimple Presents, a bi-annual, live product showcase featuring its latest financial innovations. Nearly 350,000 Canadians registered to attend the 2025 livestream events. \"Few companies have achieved what Wealthsimple has in the last few years,\" said Christian Jensen, Partner at Dragoneer  ...    disciplined growth,\" said Afsaneh Lebel, Managing Director, Head of Funds, CPP Investments. \"Alongside our partner  ...    Meritech and Greylock co-led Wealthsimple's raise in May 2021 alongside best-in-class investors DST Global, Sagard, ICONIQ, Dragoneer, TCV and iNovia, among others. This raise builds on Wealthsimple's 2021 equity round — one of the largest in Canadian history at that time — and marks the next chapter in its mission to transform financial services. This press release is for informational purposes only and does not constitute an offer to sell or solicitation of an  ...    About Wealthsimple Wealthsimple is one of Canada's fastest growing and most trusted money management platforms. The company offers a full suite of simple, sophisticated financial products across managed investing, do-it-yourself trading, cryptocurrency, tax filing, spending and saving. Wealthsimple currently serves 3 million Canadians and holds $100 billion in assets under administration. The company was"
+            ],
+            "preview": "Wealthsimple announces $750 million equity round at $10 billion post-money valuation to accelerate growth Accessibility Statement Skip Navigation\n\n- With a profitable and growing business, new capital"
+          },
+          {
+            "title": "Wealthsimple launches credit card, new line of credit to challenge big banks | CBC News",
+            "url": "http://www.cbc.ca/news/business/wealthsimple-announces-credit-card-1.7558568",
+            "published": "2025-06-11",
+            "highlights": [
+              "Wealthsimple launches credit card, new line of credit to challenge big banks Wealthsimple Inc. announced its first credit card and a line of credit Wednesday as it ramps up efforts to challenge the dominance of Canada's big banks. ## Company has no plans to become an actual bank, says chief commercial officer\n\nListen to this article  ...    The audio version of this article is generated by AI-based technology. Mispronunciations can occur. We are working with our partners to continually review and improve the results. Wealthsimple Inc. announced its first credit card and a line of credit Wednesday as it ramps up efforts to challenge  ...    Wealthsimple Inc. announced its first credit card and a line of credit Wednesday as it ramps up efforts to challenge the dominance of Canada's big banks. The expansion also includes the additions of mobile cheque deposits, wire transfers and bank drafts to the chequing account it launched in 2020 when it started pushing toward the full financial suite offered by banks. Wealthsimple, which started more than a decade ago with a focus on automated investment management, has long emphasized that it doesn't want to become an actual bank, and chief commercial officer Paul Teshima says it still has no plans to  ...    \"What we want to do is continue to lean into the fact that because we don't have a banking licence, we can do  ...    - Have you had trouble sending money abroad? Tell us about your experiences in an email to ask@cbc.ca. He pointed to Wealthsimple's arrangement with 10 banks to hold its clients' deposits, giving them Canada Deposit  ...    Wealthsimple's new offerings Wednesday include its credit card with two per cent cash back, while it says its line of credit will have rates as low as 4.45 per cent when it launches by the end of the year. (The current prime rate is 4.95  ...    New credit card customers will not be charged additional conversion or FX fees when spending money in foreign currencies. Wealthsimple also plans to offer its clients the ability to use their investment account balances as collateral for lines of credit. Not everything is purely digital. Clients will also be able to have bank drafts shipped at no cost to recipients. It's also working on a feature where users can still write traditional paper cheques using the app, with the financial  ...    Wealthsimple is also hinting at a pilot project being launched in the Toronto area where actual cash will be delivered  ...    ## Big banks hold most assets in Canada But even as Wealthsimple adds features, its unclear how much market share the company will be able to take from the Big Six banks that include RBC, TD, BMO, CIBC, Scotiabank and National Bank. Canadians are known to be reluctant to switch away from the big banks — the six control more than 90 per cent of bank assets under management. - Open banking could spur competition, but fintechs say Canada's moving too slowly \"Our biggest competition are the banks,\" Teshima said, but he noted there's reason to think there's demand for  ...    He said Wealthsimple has already shown it's possible to get people to move their retirement accounts, something some  ...    \"What I think what we've shown is that with a lot of investment in technology and working our clients, we make that  ...    He expects strong demand for the credit card Wealthsimple has been rolling out in test phases over the past year, as  ...    The company has shown there's demand for its combined spending and savings account as well, with about a quarter of its more than three million customers already signed up for one. Activity in higher-interest accounts boomed in recent years as rates topped four per cent, but Teshima says there's  ...    \"Chequing is the foundation, but then you can quickly move it seamlessly to wherever you want to get a higher yield, is  ...    Corrections and clarifications· Submit a news tip·Report error\n\n## Related Stories - [Open banking could spur competition, but fintechs"
+            ],
+            "preview": "Wealthsimple launches credit card, new line of credit to challenge big banks | CBC News\n\nWealthsimple launches credit card, new line of credit to challenge big banks | CBC News Loaded\n\nBusiness\n\n# Wea"
+          }
+        ]
+      },
+      "founders": {
+        "count": 5,
+        "results": [
+          {
+            "title": "Michael Katchen – NEXT Canada",
+            "url": "https://www.nextcanada.com/michael-katchen/",
+            "preview": "Michael Katchen – NEXT Canada\n\n#### Search\n\n# Michael Katchen\n\n# Michael Katchen\n\n## Co-founder and CEO, Wealthsimple\n\n### Bio\n\nMichael Katchen is the CEO and Co-founder of Wealthsimple, an innovative financial services firm operating in Canada, the U.S., and the U.K. Frustrated by his options as a "
+          },
+          {
+            "title": "Michael Katchen | Intact Financial Corporation",
+            "url": "https://www.intactfc.com/corporate-governance/board-and-leadership/michael-katchen",
+            "preview": "Michael Katchen | Intact Financial Corporation\n\nSkip to main content\n\n# Michael Katchen\n\nCo-Founder and CEO of Wealthsimple\n\nMichael Katchen is the co-founder and CEO of Wealthsimple, Canada's leading financial services innovator. The company today serves more than three million Canadians, with more"
+          },
+          {
+            "title": "Mr. Michael Katchen",
+            "url": "https://techwealth-canada.com/mr-michael-katchen/",
+            "preview": "Mr. Michael Katchen --\n\nMichael Katchen is Co-Founder and CEO of Wealthsimple, a leading financial services innovator operating in Canada, the U.S., and the U.K.\n\nMichael cares deeply about entrepreneurship, advancing innovation in Canada, and enabling everyone, regardless of age or net worth, acces"
+          },
+          {
+            "title": "Our Team – Civic Action",
+            "url": "https://leadership.civicaction.ca/people/michael-katchen/",
+            "preview": "Our Team – Civic Action\n\n# Our Team\n\nMeet the Board of Directors\n\n## Laura Adams\n\nWealth Management Canada, Morgan Stanley Wealth Canada\n\nManaging Director, Head of Institutional Sales & Trading (MSCL), CEO\n\nView Bio\n\nClose\n\nAs a Managing Director for Morgan Stanley, Laura Adams leads the Canadian I"
+          },
+          {
+            "title": "Interview with Michael Katchen, CEO of Wealthsimple: Leadership and managing rapid growth. Part 1 of 2. | by Tim Jackson, Ph.D. | The Psychology of Leadership | Medium",
+            "url": "https://medium.com/the-leadership-pad/interview-with-michael-katchen-ceo-of-wealthsimple-leadership-transformation-professional-e86e0d1b34a3",
+            "preview": "Interview with Michael Katchen, CEO of Wealthsimple: Leadership and managing rapid growth. Part 1 of 2. | by Tim Jackson, Ph.D. | The Psychology of Leadership | Medium\n\nSitemap\n\nOpen in app\n\nSign up\n\nSign in\n\nMedium Logo\n\nGet app\n\nWrite\n\nSearch\n\nSign up\n\nSign in\n\n## The Psychology of Leadership\n\nDee"
+          }
+        ]
+      }
+    },
+    "gapFill": {
+      "count": 0,
+      "results": []
+    }
+  }
+}

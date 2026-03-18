@@ -16,7 +16,7 @@ Your job is to review Exa search results and identify genuine gaps — fields th
 Gap detection rules:
 - If funding.titles_mention_company === 0, the funding search returned wrong results — flag it
 - If news.titles_mention_company === 0, the news search returned wrong results — flag it
-- If founders.titles_mention_company === 0 and founders.count < 2, founder data is missing — flag it
+- If founders.titles_mention_company === 0 and founders.count < 1, founder data is missing — flag it
 - If company_profile.count === 0, no company data was found — flag it
 - If competitors.count < 3, competitor data is thin — flag it
 - If ecosystem.count === 0, no partnership or customer data found — flag it
@@ -119,7 +119,10 @@ async function detectGaps(company, commercialData, signalsData) {
       count: signalsData.founders.results.length,
       titles: signalsData.founders.results.map(r => r.title),
       titles_mention_company: signalsData.founders.results
-        .filter(r => r.title?.toLowerCase().includes(company.toLowerCase()))
+        .filter(r =>
+          r.title?.toLowerCase().includes(company.toLowerCase()) ||
+          r.text?.slice(0, 500).toLowerCase().includes(company.toLowerCase())
+        )
         .length,
     },
   };

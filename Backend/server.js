@@ -5,27 +5,37 @@ const path = require('path');
 require('dotenv').config();
 
 const { callA, callB, fillGaps } = require('./research/exaSearches');
-const { detectGaps } = require('./research/gapDetector');
+const { detectGaps }             = require('./research/gapDetector');
+const { synthesize }             = require('./research/synthesizer');
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
 // ─────────────────────────────────────────────────────────────
-// Cache setup — two folders: exa/ and results/
-// Created on server start if they don't exist
+// CACHE SETUP
+// Three folders, checked in priority order:
+//
+//   1. .cache/synthesizedOutput/  ← full final report (skip everything)
+//   2. .cache/results/            ← raw Exa + gap data (skip Exa, run synthesizer)
+//   3. .cache/exa/                ← raw Exa only (skip Exa, run gap + synthesizer)
+//
+// Created on server start if they don't exist.
 // ─────────────────────────────────────────────────────────────
 
-const CACHE_DIR = path.join(__dirname, '.cache');
-const EXA_CACHE_DIR = path.join(CACHE_DIR, 'exa');
-const RESULT_CACHE_DIR = path.join(CACHE_DIR, 'results');
+const CACHE_DIR            = path.join(__dirname, '.cache');
+const SYNTHESIZED_CACHE    = path.join(CACHE_DIR, 'synthesizedOutput');
+const RESULT_CACHE_DIR     = path.join(CACHE_DIR, 'results');
+const EXA_CACHE_DIR        = path.join(CACHE_DIR, 'exa');
 
-[CACHE_DIR, EXA_CACHE_DIR, RESULT_CACHE_DIR].forEach(dir => {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
+[CACHE_DIR, SYNTHESIZED_CACHE, RESULT_CACHE_DIR, EXA_CACHE_DIR].forEach(dir => {
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
-console.log('[Cache] exa/ and results/ directories ready');
+console.log('[Cache] synthesizedOutput/, results/, exa/ directories ready');
+
+// ─────────────────────────────────────────────────────────────
+// CACHE HELPERS
+// ─────────────────────────────────────────────────────────────
 
 function getCacheKey(company, descriptor) {
   return `${company}_${descriptor || 'no-descriptor'}`
@@ -34,46 +44,27 @@ function getCacheKey(company, descriptor) {
     .replace(/[^a-z0-9-]/g, '') + '.json';
 }
 
-function readExaCache(company, descriptor) {
-  const file = path.join(EXA_CACHE_DIR, getCacheKey(company, descriptor));
+function readCache(dir, company, descriptor) {
+  const file = path.join(dir, getCacheKey(company, descriptor));
   if (!fs.existsSync(file)) return null;
   try {
     const data = JSON.parse(fs.readFileSync(file, 'utf8'));
-    console.log(`[Exa Cache] HIT — ${path.basename(file)}`);
+    console.log(`[Cache] HIT — ${path.relative(CACHE_DIR, file)}`);
     return data;
   } catch {
-    console.log(`[Exa Cache] Read error — ${path.basename(file)}`);
+    console.log(`[Cache] Read error — ${path.relative(CACHE_DIR, file)}`);
     return null;
   }
 }
 
-function writeExaCache(company, descriptor, data) {
-  const file = path.join(EXA_CACHE_DIR, getCacheKey(company, descriptor));
+function writeCache(dir, company, descriptor, data) {
+  const file = path.join(dir, getCacheKey(company, descriptor));
   fs.writeFileSync(file, JSON.stringify(data, null, 2));
-  console.log(`[Exa Cache] SAVED — ${path.basename(file)}`);
-}
-
-function readResultCache(company, descriptor) {
-  const file = path.join(RESULT_CACHE_DIR, getCacheKey(company, descriptor));
-  if (!fs.existsSync(file)) return null;
-  try {
-    const data = JSON.parse(fs.readFileSync(file, 'utf8'));
-    console.log(`[Result Cache] HIT — ${path.basename(file)}`);
-    return data;
-  } catch {
-    console.log(`[Result Cache] Read error — ${path.basename(file)}`);
-    return null;
-  }
-}
-
-function writeResultCache(company, descriptor, data) {
-  const file = path.join(RESULT_CACHE_DIR, getCacheKey(company, descriptor));
-  fs.writeFileSync(file, JSON.stringify(data, null, 2));
-  console.log(`[Result Cache] SAVED — ${path.basename(file)}`);
+  console.log(`[Cache] SAVED — ${path.relative(CACHE_DIR, file)}`);
 }
 
 // ─────────────────────────────────────────────────────────────
-// SSE helper
+// SSE HELPERS
 // ─────────────────────────────────────────────────────────────
 
 function send(res, event) {
@@ -85,7 +76,20 @@ function sleep(ms) {
 }
 
 // ─────────────────────────────────────────────────────────────
-// Health check
+// STEP LABELS (for frontend loading UI)
+//   0 — Initializing research pipeline
+//   1 — Searching company profile & business model
+//   2 — Mapping competitive landscape
+//   3 — Identifying ecosystem relationships
+//   4 — Scanning news & sentiment signals
+//   5 — Checking for research gaps
+//   6 — Filling research gaps
+//   7 — Research complete, preparing synthesis
+//   8 — Synthesizing intelligence brief
+// ─────────────────────────────────────────────────────────────
+
+// ─────────────────────────────────────────────────────────────
+// HEALTH CHECK
 // ─────────────────────────────────────────────────────────────
 
 app.get('/', (req, res) => {
@@ -93,17 +97,13 @@ app.get('/', (req, res) => {
 });
 
 // ─────────────────────────────────────────────────────────────
-// POST /research/stream — SSE pipeline
-// Steps:
-//   0 — Initializing research pipeline
-//   1 — Searching company profile & business model
-//   2 — Mapping competitive landscape
-//   3 — Identifying ecosystem relationships
-//   4 — Scanning news & sentiment signals
-//   5 — Checking for research gaps
-//   6 — Filling gaps (only fires if gaps found)
-//   7 — Research complete, ready for synthesis
-//   done — final data payload
+// POST /research/stream — main SSE pipeline
+//
+// Cache check order:
+//   TIER 1: synthesizedOutput cache → return immediately, skip all steps
+//   TIER 2: results cache → skip Exa + gap detection, jump to synthesizer
+//   TIER 3: exa cache → skip Exa calls, run gap detection + synthesizer
+//   MISS:   run full pipeline from scratch
 // ─────────────────────────────────────────────────────────────
 
 app.post('/research/stream', async (req, res) => {
@@ -121,39 +121,76 @@ app.post('/research/stream', async (req, res) => {
   try {
     send(res, { step: 0 }); // Initializing research pipeline
 
-    // ── Check result cache first — skip everything if hit ──
-    const cachedResult = readResultCache(company, descriptor);
+    // ── TIER 1: Synthesized output cache ──────────────────────
+    // Full final report already exists — skip everything
+    const cachedSynthesized = readCache(SYNTHESIZED_CACHE, company, descriptor);
 
-    if (cachedResult) {
-      console.log('[Stream] Result cache hit — skipping full pipeline');
-      send(res, { step: 1 }); await sleep(150);
-      send(res, { step: 2 }); await sleep(150);
-      send(res, { step: 3 }); await sleep(150);
-      send(res, { step: 4 }); await sleep(150);
-      send(res, { step: 5 }); await sleep(150);
-      send(res, { step: 7 });
-      send(res, { step: 'done', data: cachedResult, served_from_cache: 'result' });
+    if (cachedSynthesized) {
+      console.log('[Stream] Synthesized cache hit — returning final report immediately');
+      for (let step = 1; step <= 8; step++) {
+        send(res, { step });
+        await sleep(80);
+      }
+      send(res, {
+        step: 'done',
+        data: cachedSynthesized,
+        served_from_cache: 'synthesizedOutput',
+      });
       res.end();
       return;
     }
 
-    // ── Phase 1 — Exa retrieval (check exa cache first) ───
+    // ── TIER 2: Results cache ──────────────────────────────────
+    // Raw Exa + gap data exists — skip straight to synthesizer
+    const cachedResults = readCache(RESULT_CACHE_DIR, company, descriptor);
+
+    if (cachedResults) {
+      console.log('[Stream] Results cache hit — skipping Exa + gap detection, running synthesizer');
+      for (let step = 1; step <= 7; step++) {
+        send(res, { step });
+        await sleep(80);
+      }
+
+      send(res, { step: 8 }); // Synthesizing intelligence brief
+      const intelligenceReport = await synthesize(company, cachedResults);
+
+      const finalOutput = {
+        ...cachedResults,
+        status: 'complete',
+        intelligence_report: intelligenceReport,
+      };
+
+      writeCache(SYNTHESIZED_CACHE, company, descriptor, finalOutput);
+
+      send(res, {
+        step: 'done',
+        data: finalOutput,
+        served_from_cache: 'results',
+      });
+      res.end();
+      return;
+    }
+
+    // ── TIER 3: Exa cache ──────────────────────────────────────
+    // Raw Exa results exist — skip Exa calls, run gap detection + synthesizer
     let commercialData, signalsData;
-    const cachedExa = readExaCache(company, descriptor);
+    const cachedExa = readCache(EXA_CACHE_DIR, company, descriptor);
 
     if (cachedExa) {
-      console.log('[Stream] Exa cache hit — skipping Exa calls');
+      console.log('[Stream] Exa cache hit — skipping Exa calls, running gap detection + synthesizer');
       commercialData = cachedExa.commercialData;
-      signalsData = cachedExa.signalsData;
+      signalsData    = cachedExa.signalsData;
 
-      send(res, { step: 1 }); await sleep(150);
-      send(res, { step: 2 }); await sleep(150);
-      send(res, { step: 3 }); await sleep(150);
-      send(res, { step: 4 }); await sleep(150);
+      for (let step = 1; step <= 4; step++) {
+        send(res, { step });
+        await sleep(80);
+      }
+
     } else {
-      console.log('[Stream] Exa cache miss — running parallel retrieval');
+      // ── FULL MISS: Run Exa from scratch ─────────────────────
+      console.log('[Stream] No cache — running full pipeline');
 
-      send(res, { step: 1 }); // Searching company profile
+      send(res, { step: 1 }); // Searching company profile & business model
       const callAPromise = callA(company, descriptor);
 
       send(res, { step: 2 }); // Mapping competitive landscape
@@ -162,124 +199,186 @@ app.post('/research/stream', async (req, res) => {
       [commercialData, signalsData] = await Promise.all([callAPromise, callBPromise]);
 
       send(res, { step: 3 }); // Identifying ecosystem relationships
-      await sleep(100);
-      send(res, { step: 4 }); // Scanning news & sentiment
+      send(res, { step: 4 }); // Scanning news & sentiment signals
 
-      writeExaCache(company, descriptor, { commercialData, signalsData });
+      writeCache(EXA_CACHE_DIR, company, descriptor, { commercialData, signalsData });
     }
 
-    // ── Phase 2 — Gap detection ────────────────────────────
+    // ── Gap detection (always runs if no results cache) ───────
     send(res, { step: 5 }); // Checking for research gaps
     const gapResult = await detectGaps(company, commercialData, signalsData);
-    // const gapResult = []
 
-    // ── Phase 3 — Gap fill (conditional) ──────────────────
+    // ── Gap fill (conditional) ────────────────────────────────
     let gapData = [];
 
     if (gapResult.gaps.length > 0) {
-      send(res, { step: 6 }); // Filling gaps
+      send(res, { step: 6 }); // Filling research gaps
       console.log(`[Stream] Filling ${gapResult.gaps.length} gap(s)...`);
       gapData = await fillGaps(gapResult.gaps);
     } else {
-      console.log('[Stream] No gaps detected — skipping gap fill');
+      console.log('[Stream] No gaps — skipping gap fill');
     }
 
-    send(res, { step: 7 }); // Research complete, ready for synthesis
+    send(res, { step: 7 }); // Research complete, preparing synthesis
 
-    // ── Build pipeline output ──────────────────────────────
-    // Claude synthesis will be added here next
-    // For now, return the full raw research data
+    // ── Assemble pipeline bundle ──────────────────────────────
     const pipelineOutput = {
       status: 'exa_complete',
       company,
       descriptor: descriptor || null,
       gap_detection: {
         gaps_found: gapResult.gaps.length,
-        gaps: gapResult.gaps,
+        gaps:       gapResult.gaps,
         confidence: gapResult.confidence,
-        notes: gapResult.notes,
+        notes:      gapResult.notes,
       },
       results: {
         callA: {
           companyProfile: {
-            count: commercialData.companyProfile.results.length,
+            count:   commercialData.companyProfile.results.length,
             results: commercialData.companyProfile.results.map(r => ({
-              title: r.title,
-              url: r.url,
-              preview: r.text?.slice(0, 300),
+              title:   r.title,
+              url:     r.url,
+              preview: r.text,
             })),
           },
           competitors: {
-            count: commercialData.competitors.results.length,
+            count:   commercialData.competitors.results.length,
             results: commercialData.competitors.results.map(r => ({
-              title: r.title,
-              url: r.url,
-              preview: r.text?.slice(0, 200),
+              title:   r.title,
+              url:     r.url,
+              preview: r.text,
             })),
           },
           funding: {
-            count: commercialData.funding.results.length,
+            count:   commercialData.funding.results.length,
             results: commercialData.funding.results.map(r => ({
-              title: r.title,
-              url: r.url,
-              preview: r.text?.slice(0, 200),
+              title:   r.title,
+              url:     r.url,
+              preview: r.text, // more text — highest hallucination risk
             })),
           },
           ecosystem: {
-            count: commercialData.ecosystem?.results.length || 0,
+            count:   commercialData.ecosystem?.results.length || 0,
             results: (commercialData.ecosystem?.results || []).map(r => ({
-              title: r.title,
-              url: r.url,
-              preview: r.text?.slice(0, 200),
+              title:   r.title,
+              url:     r.url,
+              preview: r.text,
             })),
           },
         },
         callB: {
           news: {
-            count: signalsData.news.results.length,
+            count:   signalsData.news.results.length,
             results: signalsData.news.results.map(r => ({
-              title: r.title,
-              url: r.url,
-              published: r.publishedDate?.slice(0, 10),
+              title:      r.title,
+              url:        r.url,
+              published:  r.publishedDate?.slice(0, 20),
               highlights: r.highlights,
-              preview: r.text?.slice(0, 200),
+              preview:    r.text,
             })),
           },
           founders: {
-            count: signalsData.founders.results.length,
+            count:   signalsData.founders.results.length,
             results: signalsData.founders.results.map(r => ({
-              title: r.title,
-              url: r.url,
-              preview: r.text?.slice(0, 300),
+              title:   r.title,
+              url:     r.url,
+              preview: r.text,
             })),
           },
         },
         gapFill: {
-          count: gapData.length,
+          count:   gapData.length,
           results: gapData.map((r, i) => ({
-            query: gapResult.gaps[i],
-            count: r.results?.length || 0,
+            query:   gapResult.gaps[i],
+            count:   r.results?.length || 0,
             results: (r.results || []).map(x => ({
-              title: x.title,
-              url: x.url,
-              preview: x.text?.slice(0, 200),
+              title:   x.title,
+              url:     x.url,
+              preview: x.text,
             })),
           })),
         },
       },
     };
 
-    // NOTE: once Claude synthesis is added, save to result cache here:
-    // writeResultCache(company, descriptor, finalIntelligenceReport);
+    // Save results cache before synthesizing
+    // This way if synthesis fails, the next request can resume from here
+    writeCache(RESULT_CACHE_DIR, company, descriptor, pipelineOutput);
+    send(res, { step: 8 });
+    // ── Synthesizer ───────────────────────────────────────────
+    const intelligenceReport = await synthesize(company, pipelineOutput);
 
-    send(res, { step: 'done', data: pipelineOutput, served_from_cache: false });
+    const finalOutput = {
+      ...pipelineOutput,
+      status: 'complete',
+      intelligence_report: intelligenceReport,
+    };
+ 
+    // Save to synthesized cache — this is what future requests will hit first
+    writeCache(SYNTHESIZED_CACHE, company, descriptor, finalOutput);
+
+    send(res, {
+      step: 'done',
+      data: finalOutput,
+      served_from_cache: false,
+    });
     res.end();
 
   } catch (error) {
-    console.error('[Stream] Error:', error.message);
+    console.error('[Stream] Pipeline error:', error.message);
     send(res, { step: 'error', message: error.message });
     res.end();
   }
+});
+
+// ─────────────────────────────────────────────────────────────
+// DELETE /cache — clear cache for a specific company
+// Body: { company, descriptor? }
+// Useful during development or when forcing a re-research
+// ─────────────────────────────────────────────────────────────
+
+app.delete('/cache', (req, res) => {
+  const { company, descriptor } = req.body;
+
+  if (!company) {
+    return res.status(400).json({ error: 'Company name is required' });
+  }
+
+  const key = getCacheKey(company, descriptor);
+  const targets = [
+    path.join(SYNTHESIZED_CACHE, key),
+    path.join(RESULT_CACHE_DIR, key),
+    path.join(EXA_CACHE_DIR, key),
+  ];
+
+  const deleted = [];
+  targets.forEach(file => {
+    if (fs.existsSync(file)) {
+      fs.unlinkSync(file);
+      deleted.push(path.relative(CACHE_DIR, file));
+    }
+  });
+
+  console.log(`[Cache] Cleared for "${company}": ${deleted.length} file(s) deleted`);
+  res.json({ cleared: deleted, company, descriptor: descriptor || null });
+});
+
+// ─────────────────────────────────────────────────────────────
+// GET /cache — list what's cached (useful for debugging)
+// ─────────────────────────────────────────────────────────────
+
+app.get('/cache', (req, res) => {
+  const list = (dir) =>
+    fs.existsSync(dir)
+      ? fs.readdirSync(dir).filter(f => f.endsWith('.json'))
+      : [];
+
+  res.json({
+    synthesizedOutput: list(SYNTHESIZED_CACHE),
+    results:           list(RESULT_CACHE_DIR),
+    exa:               list(EXA_CACHE_DIR),
+  });
 });
 
 const PORT = process.env.PORT || 5000;
