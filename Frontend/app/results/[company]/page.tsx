@@ -89,7 +89,6 @@
 //   );
 // }
 
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -136,50 +135,50 @@ export default function ResultsPage() {
     }
   }, [slug]);
 
-
   // ── Error ────────────────────────────────────────────────────
-  if (error) {
-    return (
-      <div className="w-full h-screen flex items-center justify-center bg-[var(--bg)]">
-        <div className="text-center font-mono text-[13px] text-[var(--text4)]">
-          <p className="mb-4">
-            No report found for{" "}
-            <em className="text-[var(--text2)]">{companyName}</em>.
-          </p>
-          <button
-            onClick={() => router.push("/")}
-            className="text-[var(--gold)] underline"
-          >
-            Search again
-          </button>
-        </div>
-      </div>
-    );
-  }
+  // if (error) {
+  //   return (
+  //     <div className="w-full h-screen flex items-center justify-center bg-[var(--bg)]">
+  //       <div className="text-center font-mono text-[13px] text-[var(--text4)]">
+  //         <p className="mb-4">
+  //           No report found for{" "}
+  //           <em className="text-[var(--text2)]">{companyName}</em>.
+  //         </p>
+  //         <button
+  //           onClick={() => router.push("/")}
+  //           className="text-[var(--gold)] underline"
+  //         >
+  //           Search again
+  //         </button>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
-  // ── Loading ──────────────────────────────────────────────────
-  if (!report) {
-    return (
-      <div className="w-full h-screen flex items-center justify-center bg-[var(--bg)]">
-        <span className="font-mono text-[13px] text-[var(--text4)] animate-pulse">
-          Loading...
-        </span>
-      </div>
-    );
-  }
+  // // ── Loading ──────────────────────────────────────────────────
+  // if (!report) {
+  //   return (
+  //     <div className="w-full h-screen flex items-center justify-center bg-[var(--bg)]">
+  //       <span className="font-mono text-[13px] text-[var(--text4)] animate-pulse">
+  //         Loading...
+  //       </span>
+  //     </div>
+  //   );
+  // }
 
   // ── Render ───────────────────────────────────────────────────
   return (
     <div className="w-full bg-[var(--bg)] border border-[var(--border)] flex flex-col h-screen">
       <Topbar
-        companyName={report.company.name}
-        fitLevel={toFitLevel(report.fit_score?.score)}
+        companyName={report?.company.name || "company"}
+        fitLevel={toFitLevel(report?.fit_score?.score)}
       />
       <div className="grid grid-cols-[68vw_32vw] flex-1 overflow-hidden">
         <div className="border-r border-[var(--border)]">
-          <EcosystemMap nodes={report.ecosystem.nodes} />
+          {/* <EcosystemMap nodes={report.ecosystem.nodes} /> */}
+          <EcosystemMap companyName={"company"} />
         </div>
-        <BriefPanel data={report} />
+        {/* <BriefPanel data={report} /> */}
       </div>
     </div>
   );

@@ -1,198 +1,479 @@
 "use client";
 
-import { EcosystemNode } from "@/types/report";
+import { useMemo } from "react";
 
-// ── Canvas + layout constants ────────────────────────────────
-// Canvas: 1000 × 560
-// Left box:  x=10..250   → centre=130, inner safe x: 10+70=80 .. 250-70=180
-// Right box: x=750..990  → centre=870, inner safe x: 750+70=820 .. 990-70=920
-// Target stays at cx=500 (true centre of 1000px canvas)
-const TARGET   = { cx: 500, cy: 280 };
-const LEFT_CX  = 130;   // centre of left box
-const RIGHT_CX = 870;   // centre of right box
-const BOX_TOP  = 40;
-const BOX_BOT  = 520;
-const NODE_PAD = 70;    // half box-width (120) minus max-radius (52) = 68, round up
-const SAFE_TOP = BOX_TOP + NODE_PAD;
-const SAFE_BOT = BOX_BOT - NODE_PAD;
-
-// ── Helpers ──────────────────────────────────────────────────
-function columnY(index: number, total: number): number {
-  if (total === 1) return (SAFE_TOP + SAFE_BOT) / 2;
-  return SAFE_TOP + index * ((SAFE_BOT - SAFE_TOP) / (total - 1));
+// Approximate rendered character width at a given font size (monospace, roughly)
+// Using ~0.6 * fontSize as a safe estimate for most characters
+function estimateTextWidth(text: string, fontSize: number): number {
+  return text.length * fontSize * 0.62;
 }
 
-function splitName(name: string): [string, string] {
+function splitName(name: string, maxCharsPerLine: number = 12): string[] {
   const words = name.split(" ");
-  if (words.length === 1) return [name, ""];
-  const mid = Math.ceil(words.length / 2);
-  return [words.slice(0, mid).join(" "), words.slice(mid).join(" ")];
+  if (words.length === 1 && name.length <= maxCharsPerLine) return [name];
+
+  const lines: string[] = [];
+  let currentLine = "";
+
+  for (const word of words) {
+    if (currentLine.length + word.length + 1 <= maxCharsPerLine) {
+      currentLine = currentLine ? `${currentLine} ${word}` : word;
+    } else {
+      if (currentLine) lines.push(currentLine);
+      currentLine = word;
+    }
+  }
+  if (currentLine) lines.push(currentLine);
+
+  return lines.length > 0 ? lines : [name];
 }
 
-// fontSize 9, IBM Plex Mono ≈ 5.4px/char — clamped 28–52
-function nodeRadius(name: string): number {
-  const [l1, l2] = splitName(name);
-  const longest  = Math.max(l1.length, l2.length);
-  return Math.min(Math.max(Math.ceil((longest * 5.4) / 2) + 12, 28), 52);
+// Given a name, font size, and padding, compute the minimum circle diameter
+// that keeps all text inside the circle.
+// For a circle of radius r, text at line i (offset dy from center) must satisfy:
+//   halfWidth² + dy² ≤ r²  →  r ≥ sqrt(halfWidth² + dy²)
+function minCircleDiameter(
+  name: string,
+  fontSize: number,
+  hPad: number = 12,
+  vPad: number = 10,
+): number {
+  const lines = splitName(name, 12);
+  const lineHeight = fontSize * 1.3;
+  const totalHeight = lines.length * lineHeight;
+
+  let maxRequired = 0;
+  lines.forEach((line, i) => {
+    const textW = estimateTextWidth(line, fontSize) + hPad * 2;
+    const halfW = textW / 2;
+    // Vertical offset of this line's center from the block center
+    const blockTop = -totalHeight / 2;
+    const lineCenterY = blockTop + (i + 0.5) * lineHeight;
+    // Also account for top/bottom padding
+    const topEdgeY = lineCenterY - fontSize / 2 - vPad;
+    const botEdgeY = lineCenterY + fontSize / 2 + vPad;
+
+    // The circle must contain both corners of this line's text bbox
+    const corners = [
+      { x: halfW, y: Math.abs(topEdgeY) },
+      { x: halfW, y: Math.abs(botEdgeY) },
+    ];
+    for (const { x, y } of corners) {
+      const r = Math.sqrt(x * x + y * y);
+      maxRequired = Math.max(maxRequired, r * 2);
+    }
+  });
+
+  return maxRequired;
 }
 
-// fontSize 11, IBM Plex Mono ≈ 6.6px/char — clamped 42–70
-function targetRadius(name: string): number {
-  const [l1, l2] = splitName(name);
-  const longest  = Math.max(l1.length, l2.length);
-  return Math.min(Math.max(Math.ceil((longest * 6.6) / 2) + 16, 42), 70);
+interface EcosystemMapProps {
+  companyName: string;
 }
 
-// ── Component ────────────────────────────────────────────────
-export default function EcosystemMap({ nodes }: { nodes: EcosystemNode[] }) {
-  const competitors = nodes.filter((n) => n.type === "competitor").slice(0, 5);
-  const ecosystem   = nodes.filter((n) => n.type === "ecosystem").slice(0, 5);
-  const targetNode  = nodes.find((n) => n.type === "target");
-  const targetName  = targetNode?.name ?? "";
-  const tR          = targetRadius(targetName);
+export default function EcosystemMap({ companyName }: EcosystemMapProps) {
+  const competitors = [
+    { name: "Questrade" },
+    { name: "RBC InvestEase" },
+    { name: "BMO SmartFolio" },
+    { name: "Moka Financial" },
+    { name: "CI Direct Investing" },
+    { name: "Questrade" },
+    { name: "RBC InvestEase" },
+    { name: "BMO SmartFolio" },
+    { name: "Moka Financial" },
+    { name: "CI Direct Investing" },
+    { name: "Moka Financial" },
+  ];
+
+  const ecosystem = [
+    { name: "Power Corporation of Canada" },
+    { name: "Broadridge" },
+    { name: "IGM Financial" },
+    { name: "Plaid Technologies" },
+    { name: "Stripe Inc" },
+    { name: "Questrade" },
+    { name: "RBC InvestEase" },
+    { name: "BMO SmartFolio" },
+    { name: "Moka Financial" },
+    { name: "CI Direct Investing" },
+    { name: "CI Direct Investing" },
+  ];
+
+  const totalCompanies = competitors.length + ecosystem.length;
+
+  // Base font size from count
+  const baseFontSize = useMemo(() => {
+    if (totalCompanies <= 6) return 11;
+    if (totalCompanies <= 10) return 10;
+    if (totalCompanies <= 14) return 9;
+    return 8;
+  }, [totalCompanies]);
+
+  // Compute per-node sizes driven by text content
+  const getNodeSize = (name: string) => {
+    const minDiameter = minCircleDiameter(name, baseFontSize);
+    // Also enforce a count-based minimum
+    const countMin =
+      totalCompanies <= 6
+        ? 90
+        : totalCompanies <= 10
+          ? 75
+          : totalCompanies <= 14
+            ? 60
+            : 50;
+    return Math.max(minDiameter, countMin);
+  };
+
+  // For layout radius, use the max node size so nodes don't overlap
+  const maxNodeSize = useMemo(() => {
+    const allNames = [...competitors, ...ecosystem].map((c) => c.name);
+    return Math.max(...allNames.map((n) => getNodeSize(n)));
+  }, [competitors, ecosystem, baseFontSize]);
+
+  const sizing = useMemo(() => {
+    const targetSize =
+      totalCompanies <= 6
+        ? 130
+        : totalCompanies <= 10
+          ? 120
+          : totalCompanies <= 14
+            ? 100
+            : 90;
+    // Radius as % of container — scale up slightly to accommodate larger nodes
+    const radius = 40 + (maxNodeSize - 60) * 0.05;
+    return { fontSize: baseFontSize, targetSize, radius: Math.min(radius, 46) };
+  }, [totalCompanies, baseFontSize, maxNodeSize]);
+
+  const competitorPositions = useMemo(() => {
+    const count = competitors.length;
+    const startAngle = 180 + 20;
+    const endAngle = 360 - 20;
+    const angleStep = (endAngle - startAngle) / (count - 1 || 1);
+    return competitors.map((comp, i) => {
+      const angle = count === 1 ? 270 : startAngle + angleStep * i;
+      const radian = (angle * Math.PI) / 180;
+      return {
+        ...comp,
+        x: 50 + sizing.radius * Math.cos(radian),
+        y: 50 + sizing.radius * Math.sin(radian),
+        angle,
+      };
+    });
+  }, [competitors, sizing.radius]);
+
+  const ecosystemPositions = useMemo(() => {
+    const count = ecosystem.length;
+    const startAngle = 20;
+    const endAngle = 180 - 20;
+    const angleStep = (endAngle - startAngle) / (count - 1 || 1);
+    return ecosystem.map((eco, i) => {
+      const angle = count === 1 ? 90 : startAngle + angleStep * i;
+      const radian = (angle * Math.PI) / 180;
+      return {
+        ...eco,
+        x: 50 + sizing.radius * Math.cos(radian),
+        y: 50 + sizing.radius * Math.sin(radian),
+        angle,
+      };
+    });
+  }, [ecosystem, sizing.radius]);
+
+  const targetLines = splitName(companyName, 10);
+
+  const renderNode = (
+    name: string,
+    color: string,
+    glowColor: string,
+    x: number,
+    y: number,
+    key: string,
+  ) => {
+    const lines = splitName(name, 12);
+    const nodeSize = getNodeSize(name);
+    return (
+      <div
+        key={key}
+        className="absolute flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110 cursor-pointer group"
+        style={{
+          width: nodeSize,
+          height: nodeSize,
+          left: `${x}%`,
+          top: `${y}%`,
+          transform: "translate(-50%, -50%)",
+          backgroundColor: "#0F1014",
+          border: `1.5px solid ${color}`,
+          boxShadow: `0 0 20px ${color}15`,
+        }}
+      >
+        {/* Inner safe-area circle guide — invisible, just constrains layout */}
+        <div
+          className="flex flex-col items-center justify-center"
+          style={{
+            width: nodeSize * 0.78,
+            height: nodeSize * 0.78,
+            overflow: "hidden",
+          }}
+        >
+          {lines.map((line, j) => (
+            <div
+              key={j}
+              className="font-mono font-medium leading-tight text-center w-full"
+              style={{
+                fontSize: sizing.fontSize,
+                color,
+                lineHeight: 1.25,
+                whiteSpace: "nowrap",
+              }}
+            >
+              {line}
+            </div>
+          ))}
+        </div>
+        <div
+          className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+          style={{ boxShadow: `0 0 25px ${glowColor}` }}
+        />
+      </div>
+    );
+  };
 
   return (
-    <div className="flex flex-col h-full">
-
+    <div
+      className="flex flex-col h-full"
+      style={{ backgroundColor: "#0A0B0D" }}
+    >
       {/* Header */}
-      <div className="flex items-center py-2.5 px-[18px] border-b border-[var(--border)] shrink-0 bg-[var(--bg)]">
-        <div className="text-[12px] text-[var(--text4)] tracking-[0.02em] font-mono font-bold">
+      <div className="flex items-center justify-between py-2.5 px-4 border-b border-[var(--border)]">
+        <div className="text-[10px] text-[var(--text4)] tracking-[0.12em] font-mono">
           ECOSYSTEM MAP
+        </div>
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-1.5">
+            <div
+              className="w-2 h-2 rounded-full"
+              style={{ backgroundColor: "#E05252" }}
+            />
+            <span className="text-[9px] font-mono" style={{ color: "#E05252" }}>
+              COMPETITORS
+            </span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <div
+              className="w-2 h-2 rounded-full"
+              style={{ backgroundColor: "#4A90E2" }}
+            />
+            <span className="text-[9px] font-mono" style={{ color: "#4A90E2" }}>
+              ECOSYSTEM
+            </span>
+          </div>
         </div>
       </div>
 
-      {/* Canvas */}
-      <div
-        className="flex-1 relative overflow-hidden"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(26, 29, 36, 0.35) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(26, 29, 36, 0.35) 1px, transparent 1px)
-          `,
-          backgroundSize: "40px 40px",
-          backgroundColor: "var(--bg)",
-        }}
-      >
-        <svg
-          viewBox="0 0 1000 560"
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute inset-0 w-full h-full"
-        >
-          <defs>
-            <radialGradient id="targetGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%"   stopColor="#F59E0B" stopOpacity="0.18" />
-              <stop offset="70%"  stopColor="#F59E0B" stopOpacity="0.06" />
-              <stop offset="100%" stopColor="#F59E0B" stopOpacity="0" />
-            </radialGradient>
-            <radialGradient id="competitorGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%"   stopColor="#E05252" stopOpacity="0.10" />
-              <stop offset="60%"  stopColor="#E05252" stopOpacity="0.05" />
-              <stop offset="100%" stopColor="#E05252" stopOpacity="0.02" />
-            </radialGradient>
-            <radialGradient id="ecosystemGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%"   stopColor="#4A90E2" stopOpacity="0.10" />
-              <stop offset="60%"  stopColor="#4A90E2" stopOpacity="0.05" />
-              <stop offset="100%" stopColor="#4A90E2" stopOpacity="0.02" />
-            </radialGradient>
-          </defs>
+      {/* Map Container */}
+      <div className="flex-1 relative overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, #ffffff03 1px, transparent 1px),
+              linear-gradient(to bottom, #ffffff03 1px, transparent 1px)
+            `,
+            backgroundSize: "30px 30px",
+          }}
+        />
 
-          {/* ── Region boxes ───────────────────────────────── */}
-          <rect x={10} y={BOX_TOP} width={240} height={BOX_BOT - BOX_TOP} rx="6" fill="url(#competitorGlow)" />
-          <rect x={10} y={BOX_TOP} width={240} height={BOX_BOT - BOX_TOP} rx="6" fill="none" stroke="#E05252" strokeWidth="0.5" strokeDasharray="4,6" opacity="0.35" />
-          <text x={LEFT_CX}  y={BOX_TOP - 10} textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="15" fill="#E05252" opacity="0.7" letterSpacing="0.01em">COMPETITORS</text>
-
-          <rect x={750} y={BOX_TOP} width={240} height={BOX_BOT - BOX_TOP} rx="6" fill="url(#ecosystemGlow)" />
-          <rect x={750} y={BOX_TOP} width={240} height={BOX_BOT - BOX_TOP} rx="6" fill="none" stroke="#4A90E2" strokeWidth="0.5" strokeDasharray="4,6" opacity="0.35" />
-          <text x={RIGHT_CX} y={BOX_TOP - 10} textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="15" fill="#4A90E2" opacity="0.7" letterSpacing="0.01em">ECOSYSTEM</text>
-
-          {/* ── Target glow ────────────────────────────────── */}
-          <circle cx={TARGET.cx} cy={TARGET.cy} r="110" fill="url(#targetGlow)" />
-
-          {/* ── Connection lines — competitors → target ─────── */}
-          {competitors.map((node, i) => {
-            const cy = columnY(i, competitors.length);
-            const r  = nodeRadius(node.name);
-            return (
-              <line
-                key={`cl-${i}`}
-                x1={LEFT_CX + r}       y1={cy}
-                x2={TARGET.cx - tR}    y2={TARGET.cy}
-                stroke="#2A2E38" strokeWidth="1" opacity="0.55"
+        <div className="absolute inset-4 flex items-center justify-center">
+          <div
+            className="relative w-full h-full"
+            style={{ maxWidth: "800px", maxHeight: "800px", aspectRatio: "1" }}
+          >
+            {/* SVG lines */}
+            <svg
+              className="absolute inset-0 w-full h-full"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="0.5" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <circle
+                cx="50"
+                cy="50"
+                r="20"
+                fill="none"
+                stroke="#ffffff"
+                strokeWidth="0.1"
+                opacity="0.1"
               />
-            );
-          })}
-
-          {/* ── Connection lines — ecosystem → target ───────── */}
-          {ecosystem.map((node, i) => {
-            const cy = columnY(i, ecosystem.length);
-            const r  = nodeRadius(node.name);
-            return (
-              <line
-                key={`el-${i}`}
-                x1={RIGHT_CX - r}      y1={cy}
-                x2={TARGET.cx + tR}    y2={TARGET.cy}
-                stroke="#2A2E38" strokeWidth="1" opacity="0.55"
+              <circle
+                cx="50"
+                cy="50"
+                r="35"
+                fill="none"
+                stroke="#ffffff"
+                strokeWidth="0.1"
+                opacity="0.05"
               />
-            );
-          })}
+              {competitorPositions.map((comp, i) => (
+                <g key={`comp-line-${i}`}>
+                  <line
+                    x1={comp.x}
+                    y1={comp.y}
+                    x2="50"
+                    y2="50"
+                    stroke="#E05252"
+                    strokeWidth="0.3"
+                    strokeDasharray="1.5,1"
+                    opacity="0.5"
+                  />
+                  <circle
+                    cx={(comp.x + 50) / 2}
+                    cy={(comp.y + 50) / 2}
+                    r="0.6"
+                    fill="#E05252"
+                    opacity="0.7"
+                  />
+                </g>
+              ))}
+              {ecosystemPositions.map((eco, i) => (
+                <g key={`eco-line-${i}`}>
+                  <line
+                    x1={eco.x}
+                    y1={eco.y}
+                    x2="50"
+                    y2="50"
+                    stroke="#4A90E2"
+                    strokeWidth="0.3"
+                    strokeDasharray="1.5,1"
+                    opacity="0.5"
+                  />
+                  <circle
+                    cx={(eco.x + 50) / 2}
+                    cy={(eco.y + 50) / 2}
+                    r="0.6"
+                    fill="#4A90E2"
+                    opacity="0.7"
+                  />
+                </g>
+              ))}
+              <line
+                x1="50"
+                y1="5"
+                x2="50"
+                y2="95"
+                stroke="#4A90E2"
+                strokeWidth="0.15"
+                strokeDasharray="1,2"
+                opacity="0.2"
+              />
+            </svg>
 
-          {/* ── Pulse ring ──────────────────────────────────── */}
-          <circle cx={TARGET.cx} cy={TARGET.cy} r="55" fill="none" stroke="#F59E0B" strokeWidth="0.5" opacity="0.15">
-            <animate attributeName="r"       values="55;72;55"       dur="4s" repeatCount="indefinite" />
-            <animate attributeName="opacity" values="0.15;0.04;0.15" dur="4s" repeatCount="indefinite" />
-          </circle>
+            {/* Competitor Nodes */}
+            {competitorPositions.map((comp, i) =>
+              renderNode(
+                comp.name,
+                "#E05252",
+                "#E0525240",
+                comp.x,
+                comp.y,
+                `comp-node-${i}`,
+              ),
+            )}
 
-          {/* ── Target node ─────────────────────────────────── */}
-          {(() => {
-            const [l1, l2] = splitName(targetName);
-            const hasTwo   = l2.length > 0;
-            const textY    = hasTwo ? TARGET.cy - 7 : TARGET.cy + 4;
-            return (
-              <g>
-                <circle cx={TARGET.cx} cy={TARGET.cy} r={tR}     fill="#0F0D08" />
-                <circle cx={TARGET.cx} cy={TARGET.cy} r={tR}     fill="none" stroke="#F59E0B" strokeWidth="2" />
-                <circle cx={TARGET.cx} cy={TARGET.cy} r={tR + 7} fill="none" stroke="#F59E0B" strokeWidth="0.5" opacity="0.25" />
-                <text x={TARGET.cx} y={textY}      textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="11" fontWeight="700" fill="#F59E0B">{l1}</text>
-                {hasTwo && <text x={TARGET.cx} y={textY + 14} textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="11" fontWeight="700" fill="#F59E0B">{l2}</text>}
-              </g>
-            );
-          })()}
+            {/* Ecosystem Nodes */}
+            {ecosystemPositions.map((eco, i) =>
+              renderNode(
+                eco.name,
+                "#4A90E2",
+                "#4A90E240",
+                eco.x,
+                eco.y,
+                `eco-node-${i}`,
+              ),
+            )}
 
-          {/* ── Competitor nodes ────────────────────────────── */}
-          {competitors.map((node, i) => {
-            const cy     = columnY(i, competitors.length);
-            const r      = nodeRadius(node.name);
-            const [l1, l2] = splitName(node.name);
-            const hasTwo = l2.length > 0;
-            const textY  = hasTwo ? cy - 6 : cy + 4;
-            return (
-              <g key={`c-${i}`}>
-                <circle cx={LEFT_CX} cy={cy} r={r} fill="#13151A" />
-                <circle cx={LEFT_CX} cy={cy} r={r} fill="none" stroke="#E05252" strokeWidth="1.5" />
-                <text x={LEFT_CX} y={textY}      textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="9" fontWeight="600" fill="#E05252">{l1}</text>
-                {hasTwo && <text x={LEFT_CX} y={textY + 12} textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="9" fontWeight="600" fill="#E05252">{l2}</text>}
-              </g>
-            );
-          })}
-
-          {/* ── Ecosystem nodes ─────────────────────────────── */}
-          {ecosystem.map((node, i) => {
-            const cy     = columnY(i, ecosystem.length);
-            const r      = nodeRadius(node.name);
-            const [l1, l2] = splitName(node.name);
-            const hasTwo = l2.length > 0;
-            const textY  = hasTwo ? cy - 6 : cy + 4;
-            return (
-              <g key={`e-${i}`}>
-                <circle cx={RIGHT_CX} cy={cy} r={r} fill="#13151A" />
-                <circle cx={RIGHT_CX} cy={cy} r={r} fill="none" stroke="#4A90E2" strokeWidth="1.5" />
-                <text x={RIGHT_CX} y={textY}      textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="9" fontWeight="600" fill="#4A90E2">{l1}</text>
-                {hasTwo && <text x={RIGHT_CX} y={textY + 12} textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="9" fontWeight="600" fill="#4A90E2">{l2}</text>}
-              </g>
-            );
-          })}
-
-        </svg>
+            {/* Center Target Node */}
+            <div
+              className="absolute flex flex-col items-center justify-center"
+              style={{
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
+            >
+              <div
+                className="absolute rounded-full"
+                style={{
+                  width: sizing.targetSize * 1.8,
+                  height: sizing.targetSize * 1.8,
+                  background:
+                    "radial-gradient(circle, #F59E0B12 0%, #F59E0B05 40%, transparent 70%)",
+                }}
+              />
+              <div
+                className="absolute rounded-full animate-ping"
+                style={{
+                  width: sizing.targetSize * 1.15,
+                  height: sizing.targetSize * 1.15,
+                  border: "1px solid #F59E0B",
+                  opacity: 0.12,
+                  animationDuration: "3s",
+                }}
+              />
+              <div
+                className="absolute rounded-full"
+                style={{
+                  width: sizing.targetSize * 1.1,
+                  height: sizing.targetSize * 1.1,
+                  border: "1px solid #F59E0B30",
+                }}
+              />
+              <div
+                className="relative flex items-center justify-center rounded-full"
+                style={{
+                  width: sizing.targetSize,
+                  height: sizing.targetSize,
+                  backgroundColor: "#0A0B0D",
+                  border: "2.5px solid #F59E0B",
+                  boxShadow: "0 0 40px #F59E0B25, inset 0 0 30px #F59E0B08",
+                }}
+              >
+                <div className="text-center px-2">
+                  {targetLines.map((line, i) => (
+                    <div
+                      key={i}
+                      className="font-mono font-bold leading-tight"
+                      style={{
+                        fontSize: sizing.fontSize + 4,
+                        color: "#F59E0B",
+                      }}
+                    >
+                      {line}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div
+                className="absolute font-mono tracking-[0.2em]"
+                style={{
+                  bottom: -20,
+                  fontSize: "8px",
+                  color: "#F59E0B",
+                  opacity: 0.5,
+                }}
+              >
+                TARGET
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
