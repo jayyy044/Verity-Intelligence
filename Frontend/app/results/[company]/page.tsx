@@ -176,9 +176,9 @@ export default function ResultsPage() {
         companyName={report.company.name}
         fitLevel={toFitLevel(report.fit_score?.score)}
       />
-      <div className="grid grid-cols-[1fr_340px] flex-1 overflow-hidden">
+      <div className="grid grid-cols-[68vw_32vw] flex-1 overflow-hidden">
         <div className="border-r border-[var(--border)]">
-          {/* <EcosystemMap nodes={report.ecosystem.nodes} /> */}
+          <EcosystemMap nodes={report.ecosystem.nodes} />
         </div>
         {/* <BriefPanel data={report} /> */}
       </div>
