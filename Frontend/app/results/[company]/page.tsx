@@ -89,7 +89,6 @@
 //   );
 // }
 
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -136,7 +135,6 @@ export default function ResultsPage() {
     }
   }, [slug]);
 
-
   // ── Error ────────────────────────────────────────────────────
   if (error) {
     return (
@@ -157,7 +155,7 @@ export default function ResultsPage() {
     );
   }
 
-  // ── Loading ──────────────────────────────────────────────────
+  // // ── Loading ──────────────────────────────────────────────────
   if (!report) {
     return (
       <div className="w-full h-screen flex items-center justify-center bg-[var(--bg)]">
@@ -172,12 +170,15 @@ export default function ResultsPage() {
   return (
     <div className="w-full bg-[var(--bg)] border border-[var(--border)] flex flex-col h-screen">
       <Topbar
-        companyName={report.company.name}
-        fitLevel={toFitLevel(report.fit_score?.score)}
+        companyName={report.identity.name}
+        fitLevel={toFitLevel(report.fit_score.score)}
       />
       <div className="grid grid-cols-[68vw_32vw] flex-1 overflow-hidden">
         <div className="border-r border-[var(--border)]">
-          <EcosystemMap nodes={report.ecosystem.nodes} />
+          <EcosystemMap
+            nodes={report.ecosystem.nodes}
+            companyName={report.identity.name}
+          />
         </div>
         <BriefPanel data={report} />
       </div>
