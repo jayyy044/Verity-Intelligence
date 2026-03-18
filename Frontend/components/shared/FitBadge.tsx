@@ -28,7 +28,7 @@ export default function FitBadge({
 
   return (
     <div
-      className="text-[10px] font-medium py-1 px-3 tracking-[0.06em] font-mono"
+      className="text-[12.5px] font-medium py-1 px-3 tracking-[0.01em] font-mono font-bold"
       style={{
         background: style.bg,
         color: style.text,
