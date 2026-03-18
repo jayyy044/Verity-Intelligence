@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const sampleCompanies = [
-  { company: "Wealthsimple", descriptor: "Canadian fintech wealth management investing" },
-  { company: "League Inc.", descriptor: "Canadian digital health benefits platform" },
-  { company: "Cohere Health", descriptor: "healthcare prior authorization AI" },
-  { company: "Nuvei", descriptor: "Canadian fintech payment processing" },
+  { company: "wealthsimple.com", descriptor: "Canadian fintech wealth management investing" },
+  { company: "league.com", descriptor: "League Inc digital health benefits AI platform Canada Michael Serbinis" },
+  { company: "coherehealth.com", descriptor: "healthcare AI prior authorization" },
+  { company: "nuvei.com", descriptor: "Canadian fintech payment processing" },
 ];
 
 export default function SearchBar() {
@@ -69,7 +69,7 @@ export default function SearchBar() {
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Enter company name  (e.g. Wealthsimple, League Inc., Cohere Health)"
+              placeholder="Enter Company Website  (e.g. wealthsimple.com)"
               className="flex-1 w-full bg-[#0A0B0D] border border-[#1E2128] outline-none text-[var(--text)] font-mono text-[13px] py-[10px] px-[18px] tracking-[0.02em] placeholder:text-[var(--text4)] hover:border-[var(--gold)] focus:border-[var(--gold)]"
             />
           </div>
@@ -79,7 +79,7 @@ export default function SearchBar() {
               type="text"
               value={descriptor}
               onChange={(e) => setDescriptor(e.target.value)}
-              placeholder="Enter company name  (e.g. Wealthsimple, League Inc., Cohere Health)"
+              placeholder="Enter Brief Company Description  (e.g.'payment processing fintech')"
               className="flex-1 w-full bg-[#0A0B0D] border border-[#1E2128] outline-none text-[var(--text)] font-mono text-[13px] py-[10px] px-[18px] tracking-[0.02em] placeholder:text-[var(--text4)] hover:border-[var(--gold)] focus:border-[var(--gold)]"
             />
           </div>

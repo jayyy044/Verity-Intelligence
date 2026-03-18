@@ -55,13 +55,13 @@ export default function BriefPanel({ data }: { data: IntelligenceReport }) {
     <div className="flex flex-col overflow-y-auto bg-[var(--surface)] brief-scrollbar h-full">
       {/* Header */}
       <div className="py-3.5 px-[18px] border-b border-[var(--border)] bg-[var(--surface)] sticky top-0 z-10 font-serif text-[25px] font-light text-[var(--text)] mb-0.5">
-          {data.company.name}
+          {/* {data.company.name} */}
       </div>
 
       {/* Sections — each receives the full report */}
-      <CompanyProfile data={data.company} />
+      {/* <CompanyProfile data={data.company} /> */}
        {/*<FitScore data={data} />*/}
-      <MarketSection data={data} />
+      {/* <MarketSection data={data} /> */}
       {/* <NewsSection data={data} />  */}
 
       {/* Footer */}
