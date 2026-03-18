@@ -1,0 +1,156 @@
+{
+  "identity": {
+    "name": "Nuvei",
+    "website": "nuvei.com",
+    "hq": "Montréal, Canada",
+    "founded": "2003",
+    "description": "Nuvei builds payment infrastructure that enables companies to accept next-generation payments, offer payouts, and benefit from card issuing, banking, risk, and fraud management services across 200+ markets.",
+    "business_model": "B2B Payment Platform",
+    "sector": "FinTech",
+    "vertical": "Payment Processing Infrastructure",
+    "headcount": "~1,662",
+    "revenue_stage": "$50M+ ARR"
+  },
+  "funding": {
+    "total_raised": "$7.9B",
+    "last_round": {
+      "series": "IPO",
+      "amount": "$833M",
+      "date": "September 2020"
+    },
+    "key_investors": [
+      "Novacap",
+      "WEX",
+      "Microsoft"
+    ],
+    "ownership_type": "Publicly traded"
+  },
+  "team": {
+    "ceo_name": "Philip Fayer",
+    "ceo_background": "Chair and CEO of Nuvei, leading the company's global expansion and strategic partnerships with major technology providers and enterprise merchants.",
+    "founder_names": [
+      "Philip Fayer"
+    ]
+  },
+  "competitive": {
+    "market_position": "Global enterprise payment processor with $1.4B revenue and 200+ market presence",
+    "direct_competitors": [
+      {
+        "name": "Adyen",
+        "differentiator": "Focuses on single platform for payments, data, and financial products with enterprise reliability"
+      },
+      {
+        "name": "Checkout.com",
+        "differentiator": "Emphasizes high-performance payments and basis point optimization for business growth"
+      },
+      {
+        "name": "Rapyd",
+        "differentiator": "Offers directly-licensed card acquiring with multi-currency business accounts"
+      },
+      {
+        "name": "Airwallex",
+        "differentiator": "Combines global payments with business accounts and company spend management"
+      },
+      {
+        "name": "PXP",
+        "differentiator": "Provides unified commerce platform orchestrating multiple acquirers and payment methods"
+      }
+    ]
+  },
+  "market": {
+    "tailwinds": [
+      "Global digital payments growth",
+      "Embedded payments adoption accelerating 15% annually",
+      "Enterprise demand for unified payment infrastructure"
+    ],
+    "headwinds": [
+      "Intense competition from established players",
+      "Regulatory complexity across 200+ markets",
+      "Technology infrastructure scaling costs"
+    ],
+    "tam_estimate": null
+  },
+  "news": {
+    "sentiment": "Positive",
+    "summary": "Strong momentum with major partnership expansions including WEX for travel payments and Microsoft Azure for infrastructure scaling to 10,000+ TPS. Recent enterprise wins like SHEIN and MediaMarktSaturn demonstrate continued market penetration. Company showing technical innovation with AI-powered transaction optimization and expanding into emerging payment methods like Wero in Europe.",
+    "recent_events": [
+      {
+        "date": "January 2026",
+        "event": "Partnership with WEX to expand virtual card payments for global travel industry"
+      },
+      {
+        "date": "December 2025",
+        "event": "Major Microsoft Azure partnership expansion enabling 10,000+ transactions per second with AI optimization"
+      },
+      {
+        "date": "November 2025",
+        "event": "Launch of Wero payments for European eCommerce merchants with European Payments Initiative"
+      },
+      {
+        "date": "April 2025",
+        "event": "Partnership with BigCommerce and launch of Invoice Financing services integrated with ERP platforms"
+      }
+    ]
+  },
+  "defensibility": {
+    "moat_signals": [
+      "Processing $502 billion annually across global infrastructure",
+      "Direct acquiring in 50 markets with 720+ alternative payment methods",
+      "Microsoft Azure AI-powered transaction optimization",
+      "Single integration for 200+ markets"
+    ],
+    "key_partnerships": [
+      "Microsoft Azure (core infrastructure)",
+      "WEX (virtual card payments)",
+      "BigCommerce (eCommerce platform)",
+      "European Payments Initiative (Wero wallet)"
+    ],
+    "leadership_changes": null
+  },
+  "ecosystem": {
+    "nodes": [
+      {
+        "name": "Adyen",
+        "type": "competitor",
+        "relationship": "Direct competitor in enterprise payment processing"
+      },
+      {
+        "name": "Checkout.com",
+        "type": "competitor",
+        "relationship": "Direct competitor in high-performance payments"
+      },
+      {
+        "name": "Rapyd",
+        "type": "competitor",
+        "relationship": "Direct competitor in global payment processing"
+      },
+      {
+        "name": "Airwallex",
+        "type": "competitor",
+        "relationship": "Direct competitor in global business payments"
+      },
+      {
+        "name": "Microsoft",
+        "type": "ecosystem",
+        "relationship": "Strategic technology partner for Azure infrastructure"
+      },
+      {
+        "name": "WEX",
+        "type": "ecosystem",
+        "relationship": "Strategic partner for virtual card payments in travel"
+      }
+    ]
+  },
+  "fit_score": {
+    "score": "Weak",
+    "sector_match": "FinTech",
+    "strategy_match": "None",
+    "geography": "Canada",
+    "rationale": "While Nuvei strongly aligns with Sagard's FinTech focus as a Canadian payment infrastructure leader with $1.4B revenue, the company is publicly traded with a $4.8B market cap, making it unsuitable for any of Sagard's investment strategies. The scale and public status place it well beyond PE buyout parameters and outside VC scope.",
+    "portfolio_context": "Competitor Checkout.com overlaps with Sagard portfolio company Formance, indicating some competitive dynamics in the payments infrastructure space."
+  },
+  "confidence": {
+    "score": "High",
+    "note": "Strong data quality across all dimensions with verified financial metrics, clear competitive positioning, and comprehensive recent news coverage, though actual revenue figure of $1.4B exceeds the $50M+ ARR category ceiling."
+  }
+}

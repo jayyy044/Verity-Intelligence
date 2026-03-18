@@ -1,0 +1,144 @@
+{
+  "identity": {
+    "name": "Wealthsimple",
+    "website": "wealthsimple.com",
+    "hq": "Toronto, Canada",
+    "founded": "2014",
+    "description": "Financial services platform offering managed investing, commission-free trading, high-interest chequing and savings, and tax filing services to help Canadians build long-term wealth.",
+    "business_model": "B2C FinTech Platform",
+    "sector": "FinTech",
+    "vertical": "Digital Wealth Management",
+    "headcount": "1,578",
+    "revenue_stage": "$50M+ ARR"
+  },
+  "funding": {
+    "total_raised": "Undisclosed",
+    "last_round": {
+      "series": "Series E",
+      "amount": "C$750M",
+      "date": "October 2025"
+    },
+    "key_investors": [
+      "Dragoneer Investment Group",
+      "GIC",
+      "CPP Investments",
+      "Power Corporation of Canada"
+    ],
+    "ownership_type": "VC-backed (Power Corporation majority)"
+  },
+  "team": {
+    "ceo_name": "Michael Katchen",
+    "ceo_background": "Co-founder and CEO of Wealthsimple since 2014, focused on making smart investing simple, transparent, and low-cost for everyone.",
+    "founder_names": [
+      "Michael Katchen",
+      "Brett Huneycutt",
+      "Rudy Adler"
+    ]
+  },
+  "competitive": {
+    "market_position": "Market leader in Canadian digital wealth management",
+    "direct_competitors": [
+      {
+        "name": "Questrade",
+        "differentiator": "Traditional self-directed trading platform with commission focus"
+      },
+      {
+        "name": "RBC InvestEase",
+        "differentiator": "Bank-backed robo-adviser with traditional banking integration"
+      },
+      {
+        "name": "Betterment",
+        "differentiator": "US-focused automated investing with tax optimization features"
+      },
+      {
+        "name": "M1 Finance",
+        "differentiator": "US platform with pie chart portfolio visualization approach"
+      }
+    ]
+  },
+  "market": {
+    "tailwinds": [
+      "Growing demand for low-cost digital financial services",
+      "Increasing adoption of robo-advisers among millennials",
+      "Cross-border payment modernization in Canada"
+    ],
+    "headwinds": [
+      "Intense competition from traditional banks",
+      "Regulatory complexity in financial services",
+      "Economic uncertainty affecting investment flows"
+    ],
+    "tam_estimate": null
+  },
+  "news": {
+    "sentiment": "Positive",
+    "summary": "Wealthsimple is executing on aggressive expansion with strategic partnerships and infrastructure investments positioning it as Canada's leading digital bank alternative. Recent SWIFT network membership and Wise payment integration demonstrate serious fintech infrastructure ambitions, while the $10B valuation milestone reflects strong investor confidence in the company's trajectory toward becoming a comprehensive financial platform.",
+    "recent_events": [
+      {
+        "date": "March 2026",
+        "event": "Became first Canadian fintech to join SWIFT network for enhanced international payments"
+      },
+      {
+        "date": "January 2026",
+        "event": "Launched Canada Post partnership for physical cash deposits at 5,500+ locations"
+      },
+      {
+        "date": "November 2025",
+        "event": "Partnered with Wise Platform to offer integrated international transfers to 30 countries"
+      },
+      {
+        "date": "October 2025",
+        "event": "Raised C$750M Series E at C$10B valuation, doubling from previous year"
+      }
+    ]
+  },
+  "defensibility": {
+    "moat_signals": [
+      "$100B+ assets under administration scale",
+      "3M+ customer base in Canada",
+      "First mover advantage in Canadian digital wealth management",
+      "Regulatory moats as licensed securities dealer"
+    ],
+    "key_partnerships": [
+      "Wise (international payments)",
+      "Canada Post (cash deposits)",
+      "SWIFT (global payments network)"
+    ],
+    "leadership_changes": null
+  },
+  "ecosystem": {
+    "nodes": [
+      {
+        "name": "Questrade",
+        "type": "competitor",
+        "relationship": "Direct competitor in Canadian online trading"
+      },
+      {
+        "name": "RBC InvestEase",
+        "type": "competitor",
+        "relationship": "Bank-backed robo-adviser competitor"
+      },
+      {
+        "name": "Betterment",
+        "type": "competitor",
+        "relationship": "US automated investing competitor"
+      },
+      {
+        "name": "Wise",
+        "type": "ecosystem",
+        "relationship": "Strategic partner for international payments infrastructure"
+      }
+    ]
+  },
+  "fit_score": {
+    "score": "Weak",
+    "sector_match": "FinTech",
+    "strategy_match": "None",
+    "geography": "Canada",
+    "rationale": "While Wealthsimple operates in Sagard's core FinTech sector and Canadian geography, the company's C$10B valuation far exceeds traditional PE parameters and it's already profitable at scale. The recent C$750M Series E positions it as a late-stage VC play beyond typical investment thresholds.",
+    "portfolio_context": "Wealthsimple is already a current Sagard portfolio company, making any new investment consideration moot."
+  },
+  "confidence": {
+    "score": "High",
+    "note": "Comprehensive data coverage across all key areas with multiple recent sources confirming valuation, team, and strategic initiatives; actual revenue of C$297M confirms $50M+ ARR classification."
+  }
+}

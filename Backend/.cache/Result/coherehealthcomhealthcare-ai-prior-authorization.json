@@ -1,0 +1,158 @@
+{
+  "identity": {
+    "name": "Cohere Health",
+    "website": "coherehealth.com",
+    "hq": "Boston, United States",
+    "founded": "2019",
+    "description": "Cohere Health provides AI-powered clinical intelligence solutions that transform prior authorization processes into comprehensive care journey management for health plans and providers.",
+    "business_model": "B2B SaaS",
+    "sector": "Healthcare",
+    "vertical": "Prior Authorization AI",
+    "headcount": "~624",
+    "revenue_stage": "$50M+ ARR"
+  },
+  "funding": {
+    "total_raised": "$286.1M",
+    "last_round": {
+      "series": "Series C",
+      "amount": "$90M",
+      "date": "May 2025"
+    },
+    "key_investors": [
+      "Temasek",
+      "Deerfield Management",
+      "Define Ventures",
+      "Flare Capital Partners"
+    ],
+    "ownership_type": "VC-backed"
+  },
+  "team": {
+    "ceo_name": "Siva Namasivayam",
+    "ceo_background": "Co-founder and CEO since 2019, previously founding partner of SCIO Health Analytics serving Fortune 500 healthcare organizations. Holds MS in Computer Science from University of Pittsburgh and MBA from University of Michigan.",
+    "founder_names": [
+      "Siva Namasivayam"
+    ]
+  },
+  "competitive": {
+    "market_position": "Market leader in AI-powered prior authorization",
+    "direct_competitors": [
+      {
+        "name": "Anterior",
+        "differentiator": "Focuses on expediting health insurance approvals with AI at $95M valuation"
+      },
+      {
+        "name": "Adjudicator",
+        "differentiator": "AI-powered system for analyzing medical policies and optimizing PA letters"
+      },
+      {
+        "name": "Humata Health",
+        "differentiator": "Comprehensive prior authorization solution for both providers and payers"
+      },
+      {
+        "name": "Banjo Health",
+        "differentiator": "Clinician-designed end-to-end platform for medical and pharmacy PA management"
+      },
+      {
+        "name": "EthermedAI",
+        "differentiator": "Intelligent automation focused on minimizing manual processes without additional apps"
+      }
+    ]
+  },
+  "market": {
+    "tailwinds": [
+      "Growing demand for healthcare AI automation",
+      "Regulatory push for faster prior authorization",
+      "Rising administrative costs driving efficiency needs"
+    ],
+    "headwinds": [
+      "AI reliability scrutiny in healthcare",
+      "Provider resistance to new technology",
+      "Complex regulatory compliance requirements"
+    ],
+    "tam_estimate": null
+  },
+  "news": {
+    "sentiment": "Positive",
+    "summary": "Strong momentum with record 2025 growth following $90M Series C funding led by Temasek. Company achieved 94% provider satisfaction, expanded client base with ten new deals including CMS contracts, and gained recognition from major industry analysts including Gartner and KLAS. Leadership recognition with CEO named EY Entrepreneur of the Year reflects successful execution of clinical intelligence strategy.",
+    "recent_events": [
+      {
+        "date": "May 2025",
+        "event": "$90M Series C funding led by Temasek to scale AI platform and expand clinical use cases"
+      },
+      {
+        "date": "July 2025",
+        "event": "CEO Siva Namasivayam named EY Entrepreneur of the Year 2025 New England Award winner"
+      },
+      {
+        "date": "October 2025",
+        "event": "Partnership with Microsoft Dragon Copilot for ambient listening prior authorization"
+      },
+      {
+        "date": "January 2026",
+        "event": "Announced record 2025 growth with ten new deals and 94% provider satisfaction"
+      }
+    ]
+  },
+  "defensibility": {
+    "moat_signals": [
+      "93-94% provider satisfaction rating",
+      "Processing 12M+ prior authorization requests annually",
+      "85% real-time authorization approvals",
+      "Clinical-grade AI with responsible AI-first approach"
+    ],
+    "key_partnerships": [
+      "MCG Health (clinical criteria)",
+      "Microsoft (ambient listening)",
+      "Epic (Payer Platform integration)",
+      "Medical Mutual",
+      "Humana"
+    ],
+    "leadership_changes": null
+  },
+  "ecosystem": {
+    "nodes": [
+      {
+        "name": "Anterior",
+        "type": "competitor",
+        "relationship": "Direct competitor in AI-powered prior authorization with $95M valuation"
+      },
+      {
+        "name": "Adjudicator",
+        "type": "competitor",
+        "relationship": "Competes in AI-powered prior authorization platform space"
+      },
+      {
+        "name": "Banjo Health",
+        "type": "competitor",
+        "relationship": "Competing clinician-designed prior authorization management solution"
+      },
+      {
+        "name": "MCG Health",
+        "type": "ecosystem",
+        "relationship": "Strategic partner providing clinical criteria integration"
+      },
+      {
+        "name": "Microsoft",
+        "type": "ecosystem",
+        "relationship": "Technology partner for ambient listening capabilities"
+      },
+      {
+        "name": "Epic",
+        "type": "ecosystem",
+        "relationship": "EHR integration partner through Payer Platform"
+      }
+    ]
+  },
+  "fit_score": {
+    "score": "Strong",
+    "sector_match": "Healthcare",
+    "strategy_match": "PE",
+    "geography": "North America",
+    "rationale": "Exceptional fit with strong Healthcare sector alignment, profitable scale at $184M revenue, and demonstrated market leadership in clinical intelligence. Company shows clear PE characteristics with mature revenue base, proven business model, and defensive market position processing 12M+ annual requests. Recent $90M Series C suggests approaching later-stage valuations but still within addressable range for the right strategic buyer.",
+    "portfolio_context": "No direct portfolio overlap identified."
+  },
+  "confidence": {
+    "score": "High",
+    "note": "Strong financial data from entity card and comprehensive recent funding coverage, though limited team leadership details beyond CEO profile."
+  }
+}

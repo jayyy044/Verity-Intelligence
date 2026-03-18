@@ -1,0 +1,142 @@
+{
+  "identity": {
+    "name": "Stripe",
+    "website": "stripe.com",
+    "hq": "San Francisco, USA",
+    "founded": "2009",
+    "description": "Stripe provides global payment processing infrastructure that enables businesses to accept payments online, manage subscriptions, and handle financial transactions seamlessly.",
+    "business_model": "Transaction fees",
+    "sector": "FinTech",
+    "vertical": "Payment Processing",
+    "headcount": null,
+    "revenue_stage": "$50M+ ARR"
+  },
+  "funding": {
+    "total_raised": "$8.73B",
+    "last_round": {
+      "series": "Secondary Transaction",
+      "amount": "Undisclosed",
+      "date": "February 2026"
+    },
+    "key_investors": [
+      "Andreessen Horowitz",
+      "Thrive Capital",
+      "Coatue",
+      "General Catalyst"
+    ],
+    "ownership_type": "VC-backed"
+  },
+  "team": {
+    "ceo_name": "Patrick Collison",
+    "ceo_background": "Co-founder and CEO of Stripe since 2009, leading one of the world's most valuable fintech companies with expertise in global payments infrastructure.",
+    "founder_names": [
+      "Patrick Collison",
+      "John Collison"
+    ]
+  },
+  "competitive": {
+    "market_position": "Global market leader in online payment processing",
+    "direct_competitors": [
+      {
+        "name": "Adyen",
+        "differentiator": "Enterprise-focused with unified commerce platform"
+      },
+      {
+        "name": "PayPal Braintree",
+        "differentiator": "Legacy brand with established merchant relationships"
+      },
+      {
+        "name": "Checkout.com",
+        "differentiator": "Performance-focused with basis point optimization"
+      },
+      {
+        "name": "GoCardless",
+        "differentiator": "Specialized in recurring payments and bank debits"
+      }
+    ]
+  },
+  "market": {
+    "tailwinds": [
+      "Digital commerce acceleration",
+      "Stablecoin adoption in B2B payments",
+      "Global expansion of online businesses"
+    ],
+    "headwinds": [
+      "Regulatory scrutiny on payment processors",
+      "Economic uncertainty affecting transaction volumes",
+      "Increasing competition from specialized providers"
+    ],
+    "tam_estimate": null
+  },
+  "news": {
+    "sentiment": "Positive",
+    "summary": "Stripe demonstrates strong momentum with stablecoin innovation through Bridge acquisition and Visa partnership expansion, while powering high-growth AI companies like Higgsfield. The company continues strategic expansion into emerging payment technologies and maintains its position as infrastructure backbone for next-generation commerce.",
+    "recent_events": [
+      {
+        "date": "March 2026",
+        "event": "Visa partnership expansion with Bridge to launch stablecoin-backed cards in over 100 countries globally"
+      },
+      {
+        "date": "March 2026",
+        "event": "Affirm partnership expansion to support Shared Payment Tokens for AI-driven commerce experiences"
+      },
+      {
+        "date": "February 2026",
+        "event": "Valuation increased 49% to $159 billion in employee tender offer, up from $106.7 billion"
+      },
+      {
+        "date": "January 2026",
+        "event": "Powered Higgsfield's rapid growth from $100M to $200M ARR in two months with global payments infrastructure"
+      }
+    ]
+  },
+  "defensibility": {
+    "moat_signals": [
+      "Global payments infrastructure with 100+ payment methods",
+      "Strong developer ecosystem and API-first approach",
+      "Critical financial infrastructure for millions of businesses"
+    ],
+    "key_partnerships": [
+      "Visa (card network partner)",
+      "FreedomPay (enterprise gateway partner)",
+      "Bridge (stablecoin infrastructure)"
+    ],
+    "leadership_changes": null
+  },
+  "ecosystem": {
+    "nodes": [
+      {
+        "name": "Adyen",
+        "type": "competitor",
+        "relationship": "Direct competitor in enterprise payment processing"
+      },
+      {
+        "name": "PayPal Braintree",
+        "type": "competitor",
+        "relationship": "Direct competitor in online payment processing"
+      },
+      {
+        "name": "Checkout.com",
+        "type": "competitor",
+        "relationship": "Direct competitor focused on payment performance optimization"
+      },
+      {
+        "name": "Visa",
+        "type": "ecosystem",
+        "relationship": "Strategic card network partner for stablecoin initiatives"
+      }
+    ]
+  },
+  "fit_score": {
+    "score": "Weak",
+    "sector_match": "FinTech",
+    "strategy_match": "VC",
+    "geography": "North America",
+    "rationale": "While Stripe perfectly aligns with Sagard's FinTech sector focus and operates in North America, the $159 billion valuation far exceeds Sagard's typical investment parameters. The company represents a mature, market-leading position in payments infrastructure rather than the growth-stage or buyout opportunities Sagard typically targets.",
+    "portfolio_context": "Competitor overlap identified with Sagard portfolio company Formance through shared competitor Checkout.com, indicating familiarity with the payments ecosystem but no direct portfolio conflict."
+  },
+  "confidence": {
+    "score": "High",
+    "note": "Comprehensive data coverage with strong funding history, clear competitive positioning, and recent news momentum, though limited ecosystem partnership details beyond major announcements."
+  }
+}

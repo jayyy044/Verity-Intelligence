@@ -1,0 +1,140 @@
+{
+  "identity": {
+    "name": "League",
+    "website": "league.com",
+    "hq": "Toronto, Canada",
+    "founded": "2014",
+    "description": "AI-powered healthcare consumer experience platform that enables payers, providers, and healthcare organizations to deliver personalized digital health engagement solutions.",
+    "business_model": "B2B SaaS",
+    "sector": "Healthcare",
+    "vertical": "Digital Health Engagement",
+    "headcount": "~404",
+    "revenue_stage": "$10–50M ARR"
+  },
+  "funding": {
+    "total_raised": "$285M",
+    "last_round": {
+      "series": "Credit Facility",
+      "amount": "$100M USD",
+      "date": "2024"
+    },
+    "key_investors": [
+      "TDM Growth Partners",
+      "TELUS Ventures",
+      "RBCx",
+      "OMERS"
+    ],
+    "ownership_type": "VC-backed"
+  },
+  "team": {
+    "ceo_name": "Michael Serbinis",
+    "ceo_background": "Serial entrepreneur and founder who launched League in 2014 with a mission to empower people with their health every day, leading the company's AI-first transformation strategy.",
+    "founder_names": [
+      "Michael Serbinis"
+    ]
+  },
+  "competitive": {
+    "market_position": "Leading AI-first healthcare CX platform in North America",
+    "direct_competitors": [
+      {
+        "name": "TELUS Health",
+        "differentiator": "Broader corporate wellness solutions vs League's AI-focused engagement platform"
+      },
+      {
+        "name": "Aya Care",
+        "differentiator": "Traditional HSA focus vs League's comprehensive AI-powered consumer experience"
+      },
+      {
+        "name": "Alan",
+        "differentiator": "European health insurance model vs League's North American B2B platform approach"
+      }
+    ]
+  },
+  "market": {
+    "tailwinds": [
+      "$100B digital healthcare transformation opportunity",
+      "AI-driven personalization demand",
+      "Rising healthcare engagement requirements"
+    ],
+    "headwinds": [
+      "Complex healthcare regulatory environment",
+      "Data privacy and security concerns",
+      "Integration challenges with legacy systems"
+    ],
+    "tam_estimate": "$100B"
+  },
+  "news": {
+    "sentiment": "Positive",
+    "summary": "League demonstrates strong momentum with explosive user growth (271% YoY to 63M contracted users) and continued innovation leadership through AI-first strategy. Recent product releases showcase advanced capabilities in orchestrated AI care navigation and multi-agent systems, positioning the company at the forefront of preventive healthcare transformation.",
+    "recent_events": [
+      {
+        "date": "March 2026",
+        "event": "Launched Spring '26 Release featuring Care Gap Agent Teams and orchestrated AI care navigation"
+      },
+      {
+        "date": "September 2025",
+        "event": "Announced 63M contracted users milestone, 271% YoY growth fueled by AI-first strategy"
+      },
+      {
+        "date": "October 2025",
+        "event": "Unveiled League Agent Teams multi-agent AI system for healthcare consumer needs"
+      },
+      {
+        "date": "2024",
+        "event": "Secured $100M USD credit facility from RBCx to support platform development and expansion"
+      }
+    ]
+  },
+  "defensibility": {
+    "moat_signals": [
+      "63M+ user base with network effects",
+      "Decade of healthcare consumer data",
+      "100 petabytes annual data processing",
+      "Proprietary AI Agent Teams technology"
+    ],
+    "key_partnerships": [
+      "Manulife (health benefits)",
+      "Medibank (Australia expansion)",
+      "CareSource (health plan)",
+      "SCAN (Medicare)",
+      "AWS (cloud infrastructure)"
+    ],
+    "leadership_changes": null
+  },
+  "ecosystem": {
+    "nodes": [
+      {
+        "name": "TELUS Health",
+        "type": "competitor",
+        "relationship": "Competing corporate wellness platform"
+      },
+      {
+        "name": "Aya Care",
+        "type": "competitor",
+        "relationship": "Competing HSA and benefits platform"
+      },
+      {
+        "name": "Alan",
+        "type": "competitor",
+        "relationship": "European digital health insurance competitor"
+      },
+      {
+        "name": "Arcadia",
+        "type": "ecosystem",
+        "relationship": "Partnership for consumer health engagement solutions"
+      }
+    ]
+  },
+  "fit_score": {
+    "score": "Strong",
+    "sector_match": "Healthcare",
+    "strategy_match": "VC",
+    "geography": "North America",
+    "rationale": "League represents an exceptional fit with strong Healthcare sector alignment and clear VC growth strategy match. The company's AI-first approach to healthcare consumer experience addresses a massive $100B market opportunity with proven traction (63M users, 271% YoY growth). Revenue scale of $35M ARR with unicorn valuation trajectory makes this squarely within Sagard's VC mandate rather than PE buyout territory.",
+    "portfolio_context": "No direct portfolio overlap identified."
+  },
+  "confidence": {
+    "score": "High",
+    "note": "Strong data coverage across identity, funding, and competitive landscape, though ecosystem partnerships and team details beyond CEO were limited in sources."
+  }
+}

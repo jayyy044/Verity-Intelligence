@@ -1,0 +1,647 @@
+[
+  {
+    "name": "ACCEO",
+    "url": "https://www.acceo.eu/en/",
+    "description": "ACCEO is a French consulting firm specializing in regulatory compliance for the construction and real estate sectors. They help property managers, developers, and contractors navigate building regulations and turn compliance requirements into business opportunities. The company operates across France with a focus on co-ownership management and general contracting."
+  },
+  {
+    "name": "Acheel",
+    "url": "https://www.acheel.com/",
+    "description": "Acheel is a French insurtech company offering a full suite of simple, accessible digital insurance products including home, auto, health, pet, and professional liability coverage. Founded on the principle that insurance should be transparent and easy to use, Acheel operates entirely online and targets individuals and small business owners. The company is based in France and distributes insurance through a modern app-first platform."
+  },
+  {
+    "name": "Achieve",
+    "url": "https://www.achieve.com/",
+    "description": "Achieve is a US-based personal finance company offering products designed to help people manage and reduce debt. Their offerings include personal loans, HELOCs, home equity loans, debt relief programs, and financial wellness apps like the GOOD App and MoLO. The company aims to give consumers practical tools and lending solutions to improve their financial health."
+  },
+  {
+    "name": "Groupe ADIT",
+    "url": "https://www.adit.fr/",
+    "description": "Groupe ADIT is a European leader in strategic intelligence and operational support for businesses and governments. They provide services including competitive intelligence, public affairs, security and risk management, and international business development. Operating across more than 100 countries, they help clients reduce uncertainty and navigate complex geopolitical and competitive environments."
+  },
+  {
+    "name": "Agio Ratings",
+    "url": "https://www.agioratings.io/",
+    "description": "Agio Ratings is a fintech platform specializing in risk management for digital assets and cryptocurrencies. Their platform provides credit ratings, real-time monitoring, and risk modeling tools for institutions such as trading firms, insurers, and asset managers operating in the crypto space. The company helps financial professionals manage counterparty and portfolio risk in the digital asset ecosystem."
+  },
+  {
+    "name": "Agios Pharmaceuticals",
+    "url": "https://www.agios.com/",
+    "description": "Agios is a US biopharmaceutical company focused on developing innovative therapies for rare blood diseases. Their pipeline targets conditions such as pyruvate kinase deficiency, thalassemia, and sickle cell disease, with approved medicines already on the market. The company is driven by a mission to improve patient lives through cellular metabolism and rare disease science."
+  },
+  {
+    "name": "Albert",
+    "url": "https://albert.com/",
+    "description": "Albert is a US consumer fintech app offering AI-powered personal financial management. Through its Genius assistant, users can budget, save, invest, and manage their money in one platform, with features like automatic savings, cash advances, and spending insights. The app targets individuals looking for a smart, all-in-one alternative to traditional banking."
+  },
+  {
+    "name": "Albireo Pharma (now Ipsen)",
+    "url": "https://albireopharma.com/",
+    "description": "Albireo Pharma was a biopharmaceutical company focused on developing bile acid modulators for rare pediatric liver diseases, most notably progressive familial intrahepatic cholestasis (PFIC). The company was acquired by Ipsen, a global specialty-driven biopharmaceutical group, which now carries forward Albireo's pipeline and commercialized therapies. Ipsen operates across rare diseases, oncology, and neuroscience."
+  },
+  {
+    "name": "Allocate",
+    "url": "https://allocate.co/",
+    "description": "Allocate is a US fintech company providing operating system infrastructure for private markets investing. Their platform connects wealth advisors with asset managers, enabling efficient access to private equity, venture capital, and other alternative investments. They offer tools for fund launch, portfolio management, and capital allocation, targeting the wealth advisory channel."
+  },
+  {
+    "name": "Alpaca",
+    "url": "https://alpaca.markets/",
+    "description": "Alpaca is a developer-first brokerage API platform enabling fintech companies and individual developers to build stock, options, and crypto trading applications. Their Broker API powers embedded investing features in third-party apps, while their Trading API supports algorithmic and quantitative trading strategies. Alpaca is known for its commission-free model and seamless integration with platforms like TradingView and QuantConnect."
+  },
+  {
+    "name": "TLD Group",
+    "url": "https://www.tld-group.com/",
+    "description": "TLD Group is a global manufacturer of ground support equipment (GSE) for the aviation industry. Their products include aircraft tractors, baggage handling systems, ground power units, and air conditioning vehicles used at airports worldwide. TLD serves commercial airlines, cargo operators, military aviation, and airport authorities across more than 100 countries."
+  },
+  {
+    "name": "AnaptysBio",
+    "url": "https://www.anaptysbio.com/",
+    "description": "AnaptysBio is a US clinical-stage biotechnology company focused on developing antibody-based immunology therapeutics. Their pipeline targets inflammatory and autoimmune diseases through immune cell modulation, with candidates in development for atopic dermatitis and other conditions. The company leverages its proprietary somatic hypermutation antibody discovery platform."
+  },
+  {
+    "name": "Ansel Health",
+    "url": "https://www.joinansel.com/",
+    "description": "Ansel Health is a US insurtech company offering employer-sponsored supplemental health insurance. Their plan pays cash benefits directly to employees when they experience a covered illness or injury, helping bridge gaps in primary health coverage. Ansel works with employers and benefits brokers to deliver a modern, digital-first supplemental insurance experience."
+  },
+  {
+    "name": "Aprium Pharmacie",
+    "url": "https://aprium-pharmacie.fr/",
+    "description": "Aprium Pharmacie is a French network of affiliated independent community pharmacies operating under a shared banner. The group provides patients with access to prescription drugs, over-the-counter products, and health services through a network of physical pharmacy locations across France. They combine the personalized service of independent pharmacists with the purchasing power of a larger group."
+  },
+  {
+    "name": "Asobo Studio",
+    "url": "https://www.asobostudio.com",
+    "description": "Asobo Studio is a French video game development studio based in Bordeaux. They are best known for developing Microsoft Flight Simulator and the critically acclaimed A Plague Tale series. The studio works on both original IP and licensed titles, combining technical expertise with narrative storytelling."
+  },
+  {
+    "name": "Athenex",
+    "url": "https://www.athenex.com/",
+    "description": "Athenex is a US-based global biopharmaceutical company specializing in the development and commercialization of oncology therapies. They focus on improving the formulation and delivery of established cancer drugs, as well as developing novel oncology compounds. Athenex operates across drug development, manufacturing, and global market distribution."
+  },
+  {
+    "name": "Atomic Financial",
+    "url": "https://atomic.financial/",
+    "description": "Atomic Financial is a US fintech infrastructure company providing APIs that connect financial apps to payroll and banking systems. Their products enable direct deposit switching, income and employment verification, subscription management, and tax data access for banks, credit unions, and fintechs. Atomic powers the connectivity layer between consumer financial apps and the underlying payroll and financial institutions."
+  },
+  {
+    "name": "Audensiel",
+    "url": "https://www.audensiel.com/en",
+    "description": "Audensiel is a French digital transformation and IT consulting group. They provide services across digital strategy, business consulting, IoT, and software development, helping organizations modernize their operations and technology stacks. The firm serves clients across multiple industries in France and internationally."
+  },
+  {
+    "name": "Auxmoney",
+    "url": "https://www.auxmoney.com/",
+    "description": "Auxmoney is a German online lending marketplace connecting borrowers with institutional and private investors for personal and small business loans. The platform uses alternative data and automated credit scoring to approve borrowers who may be underserved by traditional banks. Auxmoney is one of Germany's largest digital lending platforms."
+  },
+  {
+    "name": "Bellwether Investment Management",
+    "url": "https://www.bellvest.ca/",
+    "description": "Bellwether Investment Management is a Canadian independent wealth management firm offering investment management and financial planning services. They serve individuals, families, and institutions with tailored portfolios and comprehensive wealth planning strategies. The firm operates across Canada with a focus on long-term, disciplined investing."
+  },
+  {
+    "name": "Benepass",
+    "url": "https://www.getbenepass.com/",
+    "description": "Benepass is a US employee benefits platform enabling companies to offer flexible pre-tax benefits and lifestyle spending accounts. Their platform supports HSAs, FSAs, HRAs, and customizable lifestyle accounts for wellness, professional development, and family support. Benepass targets HR teams and employers seeking to modernize and personalize their employee benefits experience."
+  },
+  {
+    "name": "Boosted.ai",
+    "url": "https://boosted.ai/",
+    "description": "Boosted.ai is a Canadian AI company building agentic artificial intelligence tools specifically designed for investment research and portfolio management. Their platform helps portfolio managers and analysts accelerate research workflows, generate investment signals, and surface insights from large volumes of financial data. The company serves institutional investors and asset managers."
+  },
+  {
+    "name": "Borrowell",
+    "url": "https://borrowell.com/",
+    "description": "Borrowell is a Canadian fintech company offering free credit scores, credit reports, and personalized financial product recommendations to over three million members. They use AI to match consumers with credit cards, loans, and other financial products suited to their credit profile. Borrowell is one of Canada's leading credit monitoring and financial wellness platforms."
+  },
+  {
+    "name": "Cérélia",
+    "url": "https://www.cerelia.com/",
+    "description": "Cérélia is a French food manufacturing group and European leader in refrigerated dough and ready-to-bake products. They produce a wide range of doughs, pancakes, and baked goods sold under retailer private labels and consumer brands across Europe and North America. Cérélia operates multiple manufacturing facilities and serves major supermarket chains globally."
+  },
+  {
+    "name": "Ceva Santé Animale",
+    "url": "http://www.ceva.com/",
+    "description": "Ceva Santé Animale is a French multinational animal health company developing and marketing vaccines, pharmaceuticals, and diagnostics for livestock, poultry, pets, and aquaculture. Headquartered in Libourne, France, Ceva operates in more than 110 countries and is one of the top global animal health companies. Their mission is to protect animal health and support sustainable food production."
+  },
+  {
+    "name": "Choosing Therapy",
+    "url": "https://www.choosingtherapy.com/",
+    "description": "Choosing Therapy is a US-based mental health media and directory platform helping consumers find therapists, understand mental health conditions, and make informed decisions about their care. The platform provides educational content written by clinicians alongside a therapist directory to help people navigate the mental health system. It serves both individuals seeking care and mental health professionals looking to grow their practice."
+  },
+  {
+    "name": "Clark",
+    "url": "https://www.clark.de/",
+    "description": "Clark is a German digital insurance manager that helps users manage all their insurance policies in one app. The platform analyzes users' existing coverage, identifies gaps, and provides personalized recommendations across health, life, liability, and other insurance categories. Clark operates as a licensed insurance broker and uses technology to simplify the often complex German insurance market."
+  },
+  {
+    "name": "Conduit Financial",
+    "url": "https://www.conduit.financial/",
+    "description": "Conduit is a global payments infrastructure company enabling businesses to send, exchange, and manage money across borders. Their platform supports accounts payable, global payroll, and cash flow management for companies operating internationally. Conduit aims to make cross-border financial transactions as simple as domestic ones for businesses of all sizes."
+  },
+  {
+    "name": "Conquest Planning",
+    "url": "https://conquestplanning.com/",
+    "description": "Conquest Planning is a Canadian financial planning software company providing advisors with tools for collaborative and goals-based financial planning. Their platform includes an AI-powered planning assistant (SAM) and supports both digital self-serve and advisor-guided planning workflows. Conquest serves financial institutions, independent advisors, and wealth management firms across Canada."
+  },
+  {
+    "name": "Corialis Group",
+    "url": "https://www.corialis-group.com/",
+    "description": "Corialis is a European manufacturer of aluminum extrusion systems and architectural solutions for windows, doors, and facades. They serve fabricators, architects, and construction companies with high-performance aluminum profiles and engineered solutions for residential and commercial buildings. Corialis operates across multiple European countries and focuses on sustainability and innovation in building materials."
+  },
+  {
+    "name": "Courchesne Larose",
+    "url": "http://courchesnelarose.com/en",
+    "description": "Courchesne Larose is a Canadian fruit and vegetable distributor with over a century of history. The company imports, distributes, and markets fresh produce to retailers, foodservice operators, and institutions across Canada. They are committed to quality, eco-responsibility, and sustainable sourcing practices."
+  },
+  {
+    "name": "CoverTree",
+    "url": "https://www.covertree.com/",
+    "description": "CoverTree is a US insurtech company specializing in manufactured home insurance. They offer policies for homeowners, community operators, and lenders, and provide an API for embedding insurance into third-party platforms. CoverTree focuses on a segment of the housing market that has historically been underserved by traditional insurers."
+  },
+  {
+    "name": "Croissant",
+    "url": "https://www.croissant.com/",
+    "description": "Croissant is a US consumer technology company offering a browser extension and mobile app that gives shoppers guaranteed buyback offers on purchases from participating retailers. Users earn 10% credit back on eligible purchases and can resell items through the platform for guaranteed value. Croissant targets conscious consumers looking to shop more sustainably and recoup value from their purchases."
+  },
+  {
+    "name": "Les Délices des 7 Vallées (D7V)",
+    "url": "https://www.d7v.fr/",
+    "description": "Les Délices des 7 Vallées (D7V) is a French agri-food company specializing in the manufacturing of frozen pastry and bakery products. They produce croissants, pains au chocolat, and other viennoiseries for retail and foodservice markets. The company is based in northern France and supplies both domestic and international customers."
+  },
+  {
+    "name": "Dialogue",
+    "url": "https://www.dialogue.co/en/",
+    "description": "Dialogue is a Canadian virtual healthcare and wellness platform serving employers and their employees. Their Integrated Health Platform combines employee assistance programs (EAP), mental health support, primary care, and chronic disease management in a single digital solution. Dialogue partners with health insurers and HR teams to improve workforce wellbeing and reduce absenteeism."
+  },
+  {
+    "name": "DiliTrust",
+    "url": "https://www.dilitrust.com/",
+    "description": "DiliTrust is a French legal technology company offering a governance and legal software suite for corporations and law departments. Their platform covers board portal management, contract lifecycle management, entity management, and matter management. DiliTrust serves legal teams, general counsels, and board secretaries looking to streamline governance workflows."
+  },
+  {
+    "name": "Dominion Lending Centres",
+    "url": "https://dominionlending.ca/",
+    "description": "Dominion Lending Centres is Canada's largest mortgage brokerage network, connecting borrowers with a wide range of residential and commercial mortgage products. Through their network of independent mortgage brokers, they offer access to rates and products from dozens of lenders across the country. DLC helps Canadians navigate home purchases, renewals, and refinancing."
+  },
+  {
+    "name": "Dorel Industries",
+    "url": "https://www.dorel.com/",
+    "description": "Dorel Industries is a Canadian consumer products company with a portfolio of globally recognized brands in juvenile products, bicycles, and home products. Their brands include Safety 1st, Maxi-Cosi, Cannondale, and Schwinn, among others. Dorel operates across multiple segments and distributes products to consumers and retailers worldwide."
+  },
+  {
+    "name": "Elysian",
+    "url": "https://elysian.is/",
+    "description": "Elysian is a US insurtech company operating as an AI-native third-party administrator (TPA) for commercial insurance claims. They combine experienced human adjusters with frontier AI to help insurers close claims faster and more cost-effectively while improving policyholder satisfaction. Elysian focuses on commercial lines and positions itself as a next-generation alternative to traditional claims administration."
+  },
+  {
+    "name": "Empower Rental Group",
+    "url": "https://www.renterg.com/",
+    "description": "Empower Rental Group is a US equipment rental company providing construction machinery, aerial lifts, earthmoving equipment, and other tools to contractors and businesses. They operate multiple branch locations serving customers across their regional markets. The company focuses on delivering a superior local rental experience compared to national chains."
+  },
+  {
+    "name": "EOS Corrugated Group",
+    "url": "https://eos-corrugated.com/",
+    "description": "EOS Corrugated Group is a European manufacturer of corrugated packaging machinery and equipment. They design and supply production lines for the manufacture of corrugated cardboard boxes and packaging materials used across various industries. EOS operates a global sales network and supports clients with installation, maintenance, and technical services."
+  },
+  {
+    "name": "Wabtec Corporation",
+    "url": "https://www.wabteccorp.com/",
+    "description": "Wabtec Corporation is a US-based global provider of equipment, systems, and services for the freight and transit rail industries. Their portfolio includes locomotives, braking systems, digital intelligence solutions, and aftermarket services for railroads and transit agencies worldwide. Wabtec is listed on the NYSE and serves customers in over 50 countries."
+  },
+  {
+    "name": "Fiscal AI",
+    "url": "https://fiscal.ai/",
+    "description": "Fiscal AI is a fintech company offering AI-powered financial analysis and automation tools for businesses and finance teams. Their platform helps companies automate bookkeeping, generate financial insights, and streamline accounting workflows using artificial intelligence. Fiscal AI targets startups and SMBs looking to replace manual finance processes with intelligent automation."
+  },
+  {
+    "name": "FläktGroup",
+    "url": "https://www.flaktgroup.com/",
+    "description": "FläktGroup is a global HVAC solutions company providing air handling, ventilation, and cooling systems for commercial, industrial, and data center applications. Their products include air handling units, fan coils, data center cooling systems, and liquid cooling solutions. Headquartered in Europe, FläktGroup serves customers across more than 65 countries."
+  },
+  {
+    "name": "Fondeadora",
+    "url": "https://fondeadora.com/",
+    "description": "Fondeadora is a Mexican digital banking platform offering financial services for individuals, freelancers, and businesses. Their products include spending accounts, debit cards, and payment tools designed to make modern banking accessible to all Mexicans. Fondeadora is one of Mexico's leading neobanks and is fully licensed as a financial institution."
+  },
+  {
+    "name": "Formance",
+    "url": "https://www.formance.com/",
+    "description": "Formance is a developer-focused fintech infrastructure company offering an open-source programmable ledger for building financial applications. Their platform enables companies to track, reconcile, and audit financial flows across payment rails, fiat currencies, and digital assets. Formance is trusted by financial services companies for regulatory-grade traceability and auditability."
+  },
+  {
+    "name": "Full House Resorts",
+    "url": "https://fullhouseresorts.com/",
+    "description": "Full House Resorts is a US casino and resort company that owns and operates regional gaming properties across the United States. Their portfolio includes properties such as the Silver Slipper Casino, American Place Casino, and Chamonix in Colorado. The company focuses on developing and managing destination gaming experiences in underserved regional markets."
+  },
+  {
+    "name": "getquin",
+    "url": "https://www.getquin.com/",
+    "description": "getquin is a German wealth tracking and portfolio management platform that allows investors to aggregate and monitor all their financial assets in one place. The platform provides portfolio analytics, AI-driven insights, and an advisory service to help users make better investment decisions. getquin targets retail investors and wealth-conscious individuals across Europe."
+  },
+  {
+    "name": "Groupe Ginger",
+    "url": "https://www.groupeginger.com/en/home/",
+    "description": "Groupe Ginger is a French engineering and consulting group providing services in geotechnics, environmental consulting, construction inspection, and infrastructure engineering. They serve public authorities, real estate developers, and industrial clients across France and internationally. The group brings together multidisciplinary expertise to support complex infrastructure and construction projects."
+  },
+  {
+    "name": "Grand Frais",
+    "url": "https://www.grandfrais.com/",
+    "description": "Grand Frais is a French retail chain specializing in fresh, seasonal, and quality food products including fruits, vegetables, cheeses, meats, fish, and grocery items. They operate large-format stores designed to feel like an indoor market, offering consumers a wide variety of fresh products at competitive prices. Grand Frais is one of France's fastest-growing fresh food retailers."
+  },
+  {
+    "name": "Groupe Climater",
+    "url": "https://www.groupe-climater.com/",
+    "description": "Groupe Climater is a French group of companies specializing in climate engineering (génie climatique), including HVAC, plumbing, refrigeration, and energy services. They provide design, installation, and maintenance of climate systems for commercial, industrial, and residential buildings. The group operates across several regions of France through its network of subsidiary companies."
+  },
+  {
+    "name": "Destaing",
+    "url": "https://www.destaing.com/fr/",
+    "description": "Destaing is a French family-owned company specializing in industrial cleaning, hygiene, and maintenance services. They provide professional cleaning solutions for industrial facilities, agri-food plants, and public spaces across France. The company offers both standard and specialized cleaning contracts tailored to the regulatory requirements of each sector."
+  },
+  {
+    "name": "Lou-Tec",
+    "url": "https://www.loutec.com/",
+    "description": "Lou-Tec is a Canadian equipment rental company offering a wide range of tools, machinery, and construction equipment for contractors, municipalities, and individuals. They operate a network of branches primarily in Quebec and provide rental, sales, and maintenance services. Lou-Tec is one of Quebec's largest independent equipment rental companies."
+  },
+  {
+    "name": "Haruko",
+    "url": "https://haruko.io/",
+    "description": "Haruko is a UK-based digital asset portfolio management platform for institutional investors and crypto-native firms. Their platform provides consolidated real-time views of portfolios across centralized exchanges, blockchains, and DeFi protocols, along with risk management and data analytics tools. Haruko serves trading firms, hedge funds, and asset managers active in the digital asset space."
+  },
+  {
+    "name": "Hellas Direct",
+    "url": "https://www.hellasdirect.gr/",
+    "description": "Hellas Direct is a Greek digital insurance company offering car, motorcycle, and home insurance products online. They use technology and data science to provide fast, transparent, and fairly priced insurance to Greek consumers. Hellas Direct is backed by prominent international investors and is one of Greece's leading insurtech companies."
+  },
+  {
+    "name": "HMY Group",
+    "url": "https://www.hmy-group.com/en/",
+    "description": "HMY Group is a French international leader in retail fixtures, shopfitting, and in-store experience design. They design and manufacture display systems, furniture, and shop-in-shop installations for major retailers in fashion, beauty, food, and other sectors. HMY serves clients across Europe, the Americas, and Asia through a network of production facilities and design studios."
+  },
+  {
+    "name": "Horizon Trading Solutions (HSoftware)",
+    "url": "https://www.hsoftware.com/",
+    "description": "Horizon Trading Solutions (accessible via hsoftware.com) is a financial technology company providing electronic trading software and infrastructure for banks, brokers, hedge funds, and exchanges. Their solutions cover order and execution management, market making, connectivity, and managed trading services. The company helps capital markets firms optimize their trading operations and technology."
+  },
+  {
+    "name": "I-Tracing",
+    "url": "https://i-tracing.com/",
+    "description": "I-Tracing is a French cybersecurity company specializing in identity and access management (IAM) and cloud security. They provide consulting, implementation, and managed security services to help organizations protect their digital infrastructure and comply with security standards. I-Tracing serves large enterprises and mid-market companies across France and Europe."
+  },
+  {
+    "name": "integrate.ai",
+    "url": "https://www.integrate.ai/",
+    "description": "integrate.ai is a Canadian AI company offering a federated data science platform that enables organizations to collaborate on machine learning models without sharing raw data. Their technology allows multiple parties—such as banks or healthcare organizations—to train shared AI models while keeping sensitive data private and secure. integrate.ai focuses on privacy-preserving AI for regulated industries."
+  },
+  {
+    "name": "Invoke Software (now Regnology)",
+    "url": "https://www.invoke-software.fr/",
+    "description": "Invoke Software, now part of Regnology, is a regulatory reporting software provider for banks and financial institutions. Their platform automates the collection, processing, and submission of regulatory data to meet requirements from supervisory authorities across Europe. Regnology serves both regulated entities and regulators themselves with its reporting infrastructure."
+  },
+  {
+    "name": "Ipackchem (Greif)",
+    "url": "https://www.ipackchem.com/",
+    "description": "Ipackchem, now a part of Greif, is a specialist in the design and manufacturing of high-performance plastic packaging for non-conventional liquid chemicals. Their products include fluorinated and multilayer plastic jerricans and drums designed to safely contain aggressive, flammable, or hazardous substances. They serve chemical, agrochemical, and pharmaceutical industries globally."
+  },
+  {
+    "name": "Just Energy",
+    "url": "https://justenergy.com/",
+    "description": "Just Energy is a North American retail energy provider offering electricity and natural gas plans to residential and commercial customers. They operate in deregulated energy markets across the US and Canada, providing fixed-rate, variable-rate, and green energy options. Just Energy also offers smart home products and energy efficiency solutions."
+  },
+  {
+    "name": "Kartesia",
+    "url": "https://www.kartesia.com/",
+    "description": "Kartesia is a European alternative asset manager specializing in private credit and asset finance for small and mid-sized companies. They provide flexible debt financing solutions including senior secured loans, unitranche facilities, and specialty finance across Europe. Kartesia manages several credit funds and is committed to responsible investing and ESG principles."
+  },
+  {
+    "name": "KBRW",
+    "url": "https://www.kbrw.com/",
+    "description": "KBRW is a French supply chain software company providing order management (OMS) and warehouse management (WMS) solutions for retail, luxury, grocery, and logistics clients. Their platform enables omnichannel order orchestration, store fulfillment, and smart inventory management. KBRW serves major European and global retailers with complex supply chain needs."
+  },
+  {
+    "name": "Kikoff",
+    "url": "https://www.kikoff.com/",
+    "description": "Kikoff is a US fintech company focused on helping consumers build or rebuild their credit scores. They offer a credit-builder account and other financial products that report positive payment history to major credit bureaus, helping users improve their credit profiles without taking on debt risk. Kikoff is one of the top-rated credit building apps in the US."
+  },
+  {
+    "name": "Kiloutou",
+    "url": "https://www.kiloutou.fr/",
+    "description": "Kiloutou is one of France's leading equipment rental companies, providing machinery and tools for construction, public works, and industrial applications. Their fleet includes aerial platforms, earthmoving equipment, power tools, and materials handling equipment available through hundreds of branches across France and several European countries. Kiloutou serves both professional contractors and individual customers."
+  },
+  {
+    "name": "KOHO",
+    "url": "https://www.koho.ca/",
+    "description": "KOHO is a Canadian neobank offering a spending account, prepaid Mastercard, savings tools, credit building products, and cash advance services through a mobile app. The platform is designed to help Canadians grow their savings, earn cash back, and build their credit without the fees of traditional banks. KOHO serves over one million Canadians and operates on a subscription-based model."
+  },
+  {
+    "name": "Kontempo",
+    "url": "https://www.kontempo.io/en",
+    "description": "Kontempo is a Latin American B2B credit platform providing working capital financing to industrial and commercial buyers. Their Kontempo360 program allows businesses to offer credit to their customers while Kontempo handles the financing, risk, and collections. The company focuses on expanding access to trade credit in Mexico and the broader Latin American market."
+  },
+  {
+    "name": "kShuttle",
+    "url": "https://kshuttle.io/en/",
+    "description": "kShuttle is a French software company offering ESG, sustainability reporting, carbon footprint, and finance performance management solutions. Their platform helps organizations comply with sustainability regulations such as CSRD, SFDR, EU Taxonomy, and IFRS 16, while also managing global minimum tax obligations. kShuttle serves mid-to-large enterprises and financial institutions seeking to centralize their ESG and financial data."
+  },
+  {
+    "name": "Delbert Pharma (Laboratoires Delbert)",
+    "url": "https://laboratoires-delbert.fr/",
+    "description": "Delbert Pharma (formerly Laboratoires Delbert) is a French pharmaceutical company dedicated to safeguarding essential medicines from market disappearance. They specialize in acquiring, relaunching, and distributing niche and legacy pharmaceutical products that are at risk of discontinuation. The company serves healthcare professionals and patients across Europe with a focus on preserving access to critical medicines."
+  },
+  {
+    "name": "Le Moniteur Boutique",
+    "url": "https://boutique.lemoniteur.fr/",
+    "description": "Le Moniteur Boutique is the e-commerce and publishing arm of Le Moniteur, a leading French media group covering construction, architecture, and public procurement. The boutique sells professional books, legal reference documents, technical guides, and subscriptions related to the French construction and public sector. It serves architects, engineers, contractors, and public authority professionals."
+  },
+  {
+    "name": "LeapXpert",
+    "url": "https://www.leapxpert.com/",
+    "description": "LeapXpert is a US/Hong Kong-based enterprise communications governance platform enabling regulated businesses to communicate with clients over popular messaging apps like WhatsApp, WeChat, and iMessage in a compliant manner. Their platform captures and archives all conversations to meet regulatory recordkeeping requirements for financial services and other regulated industries. LeapXpert integrates with Microsoft Teams and leading CRM and compliance systems."
+  },
+  {
+    "name": "LoanStreet",
+    "url": "https://www.loan-street.com/",
+    "description": "LoanStreet is a US fintech company providing an integrated online platform for loan participations and loan portfolio management. Their marketplace enables financial institutions to buy, sell, and manage shared loan interests, while their servicing and analytics tools streamline the operational side of loan trading. LoanStreet serves community banks, credit unions, and other lenders."
+  },
+  {
+    "name": "LogicMark",
+    "url": "https://www.logicmark.com/",
+    "description": "LogicMark is a US company providing medical alert devices and personal emergency response systems (PERS) for seniors, veterans, and individuals requiring monitored safety solutions. Their devices allow users to call for help in emergencies and connect with caregivers or monitoring centers. LogicMark serves the home healthcare, senior living, and Veterans Affairs markets."
+  },
+  {
+    "name": "Marinus Pharmaceuticals",
+    "url": "https://marinuspharma.com/",
+    "description": "Marinus Pharmaceuticals is a US biopharmaceutical company focused on developing therapies for rare seizure disorders and neuropsychiatric diseases. Their lead compound, ganaxolone, is a neuroactive steroid targeting GABA-A receptors, with approved and investigational uses in conditions including CDKL5 deficiency disorder and tuberous sclerosis complex. The company is dedicated to addressing high-unmet-need rare neurological diseases."
+  },
+  {
+    "name": "Marolina",
+    "url": "https://marolina.com/",
+    "description": "Marolina appears to be an early-stage or low-profile e-commerce or consumer brand with limited publicly available information. Based on website content referencing hukgear.com, the company may be involved in consumer goods or outdoor/sporting products retail. Further details about their specific product focus and industry could not be confirmed from available sources."
+  },
+  {
+    "name": "Marshmallow",
+    "url": "https://www.marshmallow.com/",
+    "description": "Marshmallow is a UK-based insurtech company offering car and van insurance with a particular focus on newcomers to the UK and people with non-UK driving histories. Using alternative data and advanced underwriting models, they are able to offer fair pricing to customers who are often penalized by traditional insurers. Marshmallow is a licensed UK insurer and one of the UK's fastest-growing insurtech companies."
+  },
+  {
+    "name": "Elsan",
+    "url": "https://www.elsan.care/en",
+    "description": "Elsan is the premier private healthcare group in France, operating a network of private clinics and hospitals across the country. They provide a broad range of medical and surgical services including surgery, maternity care, oncology, and rehabilitation through their hospital facilities. Elsan serves both French and international patients through their extensive national footprint."
+  },
+  {
+    "name": "Midas",
+    "url": "https://www.getmidas.com/",
+    "description": "Midas is a Turkish retail investment app enabling users to trade stocks on Borsa Istanbul (BIST) and US markets, as well as investment funds, crypto, options, and warrants. The platform is designed for individual investors looking for a simple, mobile-first experience to access global and local financial markets. Midas is one of Turkey's most popular retail brokerage apps."
+  },
+  {
+    "name": "nesto",
+    "url": "https://www.nesto.ca/",
+    "description": "nesto is a Canadian digital mortgage lender offering some of the country's lowest mortgage rates through an online platform supported by over 300 mortgage experts. They serve home buyers, refinancers, and renewal customers across Canada with a transparent, commission-free mortgage experience. nesto also offers a B2B platform (nestocloud) for financial institutions to power digital mortgage origination."
+  },
+  {
+    "name": "Newcastle University",
+    "url": "https://www.ncl.ac.uk/",
+    "description": "Newcastle University is a prestigious UK research university ranked among the world's top 140 institutions. Located in Newcastle upon Tyne, the university offers a wide range of undergraduate, postgraduate, and doctoral programs across medicine, engineering, humanities, and sciences. Newcastle is particularly known for its research strengths in aging, marine science, and urban sustainability."
+  },
+  {
+    "name": "Norbec",
+    "url": "https://norbec.com/",
+    "description": "Norbec is a Canadian manufacturer of insulated architectural panels and cold room systems used in commercial refrigeration and food processing facilities. Their products include insulated wall and ceiling panels, doors, and walk-in cooler and freezer systems for the food retail, restaurant, and industrial sectors. Norbec is a Canada's Best Managed Company and serves clients across North America."
+  },
+  {
+    "name": "Novepan",
+    "url": "https://www.novepan.fr/en/",
+    "description": "Novepan is a French food manufacturing group specializing in frozen raw bread doughs, snacks, puff pastries, and ready-to-top pizza bases. They produce for both retail private labels and foodservice clients across France and internationally, with a growing organic product range. The group brings together several bakery production companies under one umbrella brand."
+  },
+  {
+    "name": "Nutrisens",
+    "url": "https://www.nutrisens.com/",
+    "description": "Nutrisens is a French nutrition and health company specializing in medical nutrition products for patients with specific dietary needs, including dysphagia, malnutrition, and age-related conditions. They develop and market texture-modified foods, oral nutritional supplements, and clinical nutrition solutions for healthcare professionals and individual consumers. Nutrisens sells through pharmacies, hospitals, and their online shop."
+  },
+  {
+    "name": "OatFi",
+    "url": "https://oatfi.com/",
+    "description": "OatFi is a US B2B embedded finance company providing working capital solutions including accounts payable financing, accounts receivable acceleration, and commercial charge cards. Their infrastructure integrates directly into business payments platforms, enabling companies to offer credit and flexible payment terms to their customers and suppliers. OatFi targets fintech platforms and software companies looking to embed financial products."
+  },
+  {
+    "name": "Olympia Capital Management",
+    "url": "https://www.olympiagroup.com/",
+    "description": "Olympia Capital Management is a French independent asset management group with over 30 years of experience. They manage thematic real estate funds, UCITS flexible strategies, and dedicated portfolio mandates for institutional and private investors. The group is known for its expertise in alternative investment strategies and sustainable finance."
+  },
+  {
+    "name": "P97 Networks",
+    "url": "https://p97.com/",
+    "description": "P97 Networks (now part of PDI Technologies) is a US mobile commerce platform connecting consumers, fuel retailers, and convenience stores through digital payments, loyalty programs, and fleet management solutions. Their platform powers branded fuel and convenience retailer apps enabling pay-at-pump, in-store offers, and fleet tracking. P97 serves major energy brands and c-store operators across North America."
+  },
+  {
+    "name": "PAKFAB",
+    "url": "https://pakfab.com/",
+    "description": "PAKFAB is a Canadian and US manufacturer of returnable packaging solutions for the automotive and industrial supply chain. Their products include steel and aluminum racks, dunnage systems, injection-molded totes, and custom plastic containers designed to protect parts during transit and storage. PAKFAB offers full lifecycle services including repair, modification, sorting, and warehousing."
+  },
+  {
+    "name": "Pearler",
+    "url": "https://pearler.com/",
+    "description": "Pearler is an Australian long-term investing platform designed for passive and index investors. The platform enables users to automate investments in ETFs and shares, track their portfolios, and build wealth over time with a focus on simplicity and low fees. Pearler targets everyday Australians who want to invest consistently for the long term without actively trading."
+  },
+  {
+    "name": "Phathom Pharmaceuticals",
+    "url": "https://www.phathompharma.com/",
+    "description": "Phathom Pharmaceuticals is a US biopharmaceutical company focused on developing and commercializing innovative therapies for gastrointestinal diseases. Their lead product targets acid-related conditions including gastroesophageal reflux disease (GERD) and Helicobacter pylori infection. Phathom is committed to addressing unmet needs in GI medicine through a differentiated pipeline."
+  },
+  {
+    "name": "Pluto Credit",
+    "url": "https://www.plutocredit.com/",
+    "description": "Pluto Credit is a Middle East-based fintech company offering corporate spend management and credit card solutions for businesses. Their platform provides companies with physical and virtual corporate cards, automated expense management, and spending controls. Pluto targets startups and growing businesses in the UAE and broader MENA region."
+  },
+  {
+    "name": "Potbelly Corporation",
+    "url": "https://www.potbelly.com/",
+    "description": "Potbelly is a US fast-casual restaurant chain known for its toasted sandwiches, soups, salads, and milkshakes served in a warm, neighborhood sandwich-shop atmosphere. Founded in Chicago, Potbelly operates hundreds of locations across the United States and is a publicly traded company. They focus on fresh, made-to-order food and an inviting in-store experience."
+  },
+  {
+    "name": "Primelis",
+    "url": "https://www.primelis.com/en/",
+    "description": "Primelis is a French performance marketing and martech agency helping brands grow through paid media, SEO, retail media, and data-driven marketing strategies. They offer proprietary technology platforms and a full suite of digital marketing services spanning paid search, social advertising, Amazon optimization, and creative production. Primelis serves consumer brands, e-commerce players, and enterprise clients across Europe."
+  },
+  {
+    "name": "Qover",
+    "url": "https://www.qover.com/",
+    "description": "Qover is a Belgian insurtech company providing an embedded insurance orchestration platform for businesses wanting to offer insurance products to their customers. Their API-first platform connects companies with underwriters and enables them to launch and manage white-label insurance programs across Europe. Qover works with mobility, fintech, banking, and e-commerce companies."
+  },
+  {
+    "name": "Quipment",
+    "url": "https://www.quipment.com/",
+    "description": "Quipment is a company providing medical, laboratory, and connected device equipment along with associated services such as maintenance, calibration, training, and inventory management. They serve healthcare providers, research institutions, and life sciences companies with both equipment supply and ongoing technical support. Their Quipsite platform enables digital equipment tracking and management."
+  },
+  {
+    "name": "Plaid",
+    "url": "https://plaid.com/",
+    "description": "Plaid is a US financial technology company providing the data connectivity infrastructure that powers thousands of financial apps and services. Their APIs enable apps to securely connect to users' bank accounts to verify identity, check balances, initiate payments, and access transaction history. Plaid is used by leading fintechs, banks, and consumer apps across North America and Europe."
+  },
+  {
+    "name": "Reverence Capital Partners",
+    "url": "https://www.reverencecapital.com/",
+    "description": "Reverence Capital Partners is a New York-based private investment firm focused on the global financial services industry. They manage private equity, private credit, and real estate strategies, investing in financial services companies including wealth management, insurance, and fintech businesses. Reverence has deep sector expertise and partners with management teams to build value in financial services firms."
+  },
+  {
+    "name": "Rocky Mountaineer",
+    "url": "https://www.rockymountaineer.com/",
+    "description": "Rocky Mountaineer is a Canadian luxury train travel company offering multi-day scenic rail journeys through the Canadian Rockies and the American Southwest. Their award-winning routes connect cities like Vancouver, Banff, and Jasper, offering passengers breathtaking views from glass-dome coaches alongside fine dining experiences. Rocky Mountaineer is considered one of the world's greatest luxury train experiences."
+  },
+  {
+    "name": "Sabena Technics",
+    "url": "https://www.sabenatechnics.com/",
+    "description": "Sabena Technics is a French independent aircraft maintenance, repair, and overhaul (MRO) company serving commercial airlines, business aviation, and defense customers. They provide airframe maintenance, component overhaul, modification services, and avionics support across their network of certified European facilities. Sabena Technics is one of France's leading independent aviation MRO providers."
+  },
+  {
+    "name": "Safe Demo",
+    "url": "https://www.safe-demo.com/en/",
+    "description": "Safe Demo is a French automotive supplier specializing in the design and manufacturing of personalized security and decorative elements for vehicles. Their expertise includes cockpit components, airbag covers, and interior automotive parts combining safety performance with aesthetic customization. Safe Demo serves major automotive OEMs and Tier 1 suppliers across Europe and Asia."
+  },
+  {
+    "name": "Safic-Alcan",
+    "url": "https://www.safic-alcan.com/",
+    "description": "Safic-Alcan is a leading specialty chemical ingredients distributor operating across France and internationally. They source and distribute specialty chemicals for sectors including cosmetics, pharmaceuticals, nutraceuticals, food and beverages, coatings, and plastics. Part of a larger group, Safic-Alcan provides technical expertise and supply chain solutions to manufacturers across multiple industries."
+  },
+  {
+    "name": "Saltire Capital",
+    "url": "https://saltirecapitalltd.com/",
+    "description": "Saltire Capital is a Canadian investment holding company listed on the Toronto Stock Exchange (TSX). They acquire and manage a diversified portfolio of private and public businesses, providing long-term capital and strategic support to their holdings. Saltire focuses on building durable value across its portfolio companies over a multi-year investment horizon."
+  },
+  {
+    "name": "Groupe Santiane",
+    "url": "https://www.groupe-santiane.fr/",
+    "description": "Groupe Santiane is a French digital insurance distribution group specializing in health and personal protection insurance. They operate online platforms and affiliated brands that help individuals compare and subscribe to complementary health insurance (mutuelle) and related products. Santiane is one of France's leading digital health insurance brokers."
+  },
+  {
+    "name": "Seeds Investor",
+    "url": "https://www.seedsinvestor.com/",
+    "description": "Seeds is a US wealth management technology company offering a platform that helps independent financial advisors deliver personalized, values-aligned investing to their clients. Their tools enable advisors to build customized portfolios reflecting client values and financial goals, improving engagement and outcomes. Seeds targets registered investment advisors and wealth management firms."
+  },
+  {
+    "name": "Seisa Medical",
+    "url": "https://seisa.com/",
+    "description": "Seisa Medical (a Tekni-Plex company) is a US contract manufacturer specializing in the design, development, and manufacturing of medical devices and drug delivery systems. Their services include product design, prototyping, regulatory support (510k), process engineering, and full-scale production for medical device OEMs. Seisa serves pharmaceutical, biotechnology, and medical device companies globally."
+  },
+  {
+    "name": "SGD Pharma",
+    "url": "https://www.sgd-pharma.com/",
+    "description": "SGD Pharma is a global manufacturer of pharmaceutical glass primary packaging, producing vials, ampoules, bottles, and cartridges for the drug packaging industry. They operate manufacturing plants across Europe and India, supplying pharmaceutical companies worldwide with Type I and Type II glass containers. SGD Pharma is known for its quality standards and innovation in pharmaceutical packaging."
+  },
+  {
+    "name": "Silent-Aire",
+    "url": "https://www.silent-aire.com/",
+    "description": "Silent-Aire is a Canadian manufacturer of hyperscale cooling and modular data center solutions for large technology companies and hyperscale cloud providers. Their products include custom air handling units, computer room air conditioning systems, and liquid cooling solutions designed for high-density data center environments. Silent-Aire serves major global technology companies and is a leader in the rapidly growing data center cooling market."
+  },
+  {
+    "name": "Socotra",
+    "url": "https://www.socotra.com/",
+    "description": "Socotra is a US insurance technology company providing a cloud-native core platform for insurance carriers. Their platform covers policy administration, billing, data and reporting, and AI-powered underwriting workflows across personal, commercial, specialty, and life insurance lines. Socotra enables insurers to modernize their core systems and launch new products faster."
+  },
+  {
+    "name": "Souriau (Eaton)",
+    "url": "https://www.souriau.com/en-en",
+    "description": "Souriau, now part of Eaton's aerospace division, is a leading manufacturer of high-reliability electrical connectors for aerospace, defense, industrial, and transportation applications. Their connectors are used in demanding environments requiring high performance, vibration resistance, and environmental sealing. Souriau has a global presence and serves OEMs and defense contractors worldwide."
+  },
+  {
+    "name": "Sterimed",
+    "url": "https://www.sterimed.fr/",
+    "description": "Sterimed is a French manufacturer of sterile barrier and medical packaging systems used to maintain sterility of medical devices prior to use. They produce peel-open pouches, reels, header bags, and other packaging materials for medical device manufacturers worldwide. Sterimed's products are critical to ensuring the safe delivery of sterile instruments and implants to surgical and clinical settings."
+  },
+  {
+    "name": "Stokomani",
+    "url": "https://www.stokomani.fr/",
+    "description": "Stokomani is a French discount retailer selling a broad assortment of branded products across categories including home goods, clothing, toys, food, and beauty at heavily discounted prices. They operate a growing network of large-format stores across France, targeting value-conscious shoppers. Stokomani positions itself as a destination for branded products at low prices."
+  },
+  {
+    "name": "Sunstice",
+    "url": "https://www.sunstice.com/",
+    "description": "Sunstice is a company providing solar energy and renewable energy solutions, helping businesses and consumers transition to sustainable power sources. They offer solar installation, energy advisory, and clean energy procurement services designed to reduce carbon footprints and energy costs. Sunstice targets organizations looking to adopt renewable energy strategies."
+  },
+  {
+    "name": "Synctera",
+    "url": "https://synctera.com/",
+    "description": "Synctera is a US fintech infrastructure platform enabling companies to build and launch banking products through bank-fintech partnerships. Their platform connects fintechs with sponsor banks, providing the compliance, technology, and operational infrastructure needed to offer checking accounts, debit cards, and lending products. Synctera focuses on powering embedded banking and Banking-as-a-Service programs."
+  },
+  {
+    "name": "Groupe Synov",
+    "url": "https://www.synov-groupe.com/",
+    "description": "Groupe Synov is a French industrial group specializing in precision mechanics, tooling, and machined components for aerospace, defense, and industrial sectors. They provide design, manufacturing, and assembly of high-precision mechanical parts for demanding technical applications. The group operates several specialized manufacturing entities across France."
+  },
+  {
+    "name": "Tallied",
+    "url": "https://www.tallied.io/",
+    "description": "Tallied is a fintech company offering accounting and financial management software designed for small businesses and entrepreneurs. Their platform automates bookkeeping tasks, tracks income and expenses, and provides real-time financial reporting to help business owners stay on top of their finances. Tallied targets founders and small teams who need simple but powerful financial tools."
+  },
+  {
+    "name": "The Guarantors",
+    "url": "https://www.theguarantors.com/",
+    "description": "The Guarantors is a US fintech company providing financial guarantees and risk solutions for the residential and commercial real estate market. Their products include lease guarantees for renters who don't meet traditional income or credit thresholds, as well as security deposit replacement solutions for landlords. The Guarantors helps both tenants access housing and landlords reduce financial risk."
+  },
+  {
+    "name": "ThetaRay",
+    "url": "https://www.thetaray.com/",
+    "description": "ThetaRay is an Israeli-US AI company providing transaction monitoring and financial crime detection solutions for banks and fintech companies. Their AI-powered SONAR platform uses unsupervised machine learning to detect money laundering and fraud across complex, cross-border payment flows. ThetaRay serves global financial institutions and payment providers seeking to strengthen their AML compliance."
+  },
+  {
+    "name": "Tilt",
+    "url": "http://tilt.io",
+    "description": "Tilt is a developer tools company that provides a platform for managing microservices development environments. Their open-source tooling helps engineering teams build, run, and test multi-service applications locally with live updates and a unified development dashboard. Tilt is widely used by platform engineering and DevOps teams at software companies."
+  },
+  {
+    "name": "Toms Watch Bar",
+    "url": "https://tomswatchbar.com/",
+    "description": "Tom's Watch Bar is a US sports bar and entertainment concept focused on delivering the ultimate sports viewing experience with an enormous variety of live sporting events broadcast simultaneously. Their venues feature massive video walls and hundreds of screens ensuring guests never miss a game regardless of sport or time zone. Tom's Watch Bar operates locations in major US cities and is expanding its footprint nationally."
+  },
+  {
+    "name": "True Religion",
+    "url": "https://www.truereligion.com/",
+    "description": "True Religion is an American premium denim and apparel brand known for its distinctive stitching, horseshoe logo, and fashion-forward jeans. Founded in 2002, the company sells clothing, accessories, and footwear through its own retail stores, e-commerce platform, and wholesale partners. True Religion has a strong following in streetwear and urban fashion culture."
+  },
+  {
+    "name": "Tuum Platform",
+    "url": "https://www.tuumplatform.com/",
+    "description": "Tuum is an Estonian cloud-native core banking platform provider enabling banks, fintechs, and financial institutions to modernize and launch new financial products rapidly. Their modular platform covers accounts, payments, cards, lending, and deposits, and can be deployed in the cloud or on-premise. Tuum serves financial institutions across Europe looking to replace legacy core banking systems."
+  },
+  {
+    "name": "Unit8",
+    "url": "https://unit8.com/",
+    "description": "Unit8 is a Swiss AI and data science consulting company helping enterprises design, build, and deploy machine learning and data analytics solutions. They specialize in predictive analytics, natural language processing, computer vision, and data engineering for industries such as finance, manufacturing, and healthcare. Unit8 serves large enterprises and scale-ups looking to extract value from their data assets."
+  },
+  {
+    "name": "Valeo Pharma",
+    "url": "https://valeopharma.com/",
+    "description": "Valeo Pharma is a Canadian specialty pharmaceutical company focused on in-licensing, developing, and commercializing innovative healthcare products in Canada. They build partnerships with international pharmaceutical companies to bring novel therapies across oncology, CNS, hospital care, and rare diseases to Canadian patients and healthcare providers. Valeo Pharma is listed on the TSX Venture Exchange."
+  },
+  {
+    "name": "Valsoft Corporation",
+    "url": "https://www.valsoftcorp.com/",
+    "description": "Valsoft Corporation is a Canadian acquirer and operator of vertical market software companies. They purchase established, profitable software businesses across a wide range of niche industries and support them with capital, operational expertise, and a long-term ownership approach. Valsoft is modeled after the vertical software acquirer model and continues to grow its portfolio across North America and internationally."
+  },
+  {
+    "name": "GV3",
+    "url": "https://www.gv3.it/it/home",
+    "description": "GV3 is an Italian company specializing in the production and distribution of cables, wires, and electrical components for industrial and infrastructure applications. They serve OEMs, contractors, and distributors across Italy and international markets with a broad catalog of power and control cables. GV3 positions itself as a reliable supplier for demanding industrial electrical installations."
+  },
+  {
+    "name": "Vulcain Engineering",
+    "url": "https://www.vulcain-eng.com/fr/",
+    "description": "Vulcain Engineering is a French independent engineering consulting group providing technical expertise and project management services to the energy, nuclear, and industrial sectors. Their teams support clients through all phases of industrial project lifecycle including design, engineering studies, site supervision, and commissioning. Vulcain is particularly active in the French nuclear and energy transition sectors."
+  },
+  {
+    "name": "Wealthsimple",
+    "url": "http://www.wealthsimple.com/",
+    "description": "Wealthsimple is a Canadian fintech company offering a comprehensive suite of financial products including commission-free stock and ETF trading, robo-advisor portfolios, cryptocurrency trading, tax filing (Wealthsimple Tax), and high-interest savings accounts. It is one of Canada's largest and most recognized fintech brands, serving millions of Canadians with an app-first, low-fee approach to wealth management. Wealthsimple also offers a premium tier with additional perks and financial advice."
+  },
+  {
+    "name": "Xceedance",
+    "url": "https://www.xceedance.com/",
+    "description": "Xceedance is a global insurance consulting and managed services company providing technology, analytics, and operational support to insurers, reinsurers, and managing general agents. They help carriers modernize their operations through digital transformation, actuarial services, claims management support, and insurance program administration. Xceedance serves clients across North America, Europe, and Asia."
+  },
+  {
+    "name": "Zilo",
+    "url": "https://www.zilo.co.uk/",
+    "description": "Zilo is a UK fintech company providing data management and regulatory reporting infrastructure for the asset management and wealth management industries. Their platform automates the collection, validation, and distribution of financial instrument and fund data required for compliance with regulations such as MiFID II and EMIR. Zilo targets fund administrators, asset managers, and financial data providers seeking to streamline their data operations."
+  }
+]
