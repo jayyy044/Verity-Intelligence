@@ -74,8 +74,8 @@ interface EcosystemMapProps {
 }
 
 export default function EcosystemMap({
-  nodes,
   companyName,
+  nodes,
 }: EcosystemMapProps) {
   const competitors = nodes.filter((n) => n.type === "competitor");
   const ecosystem = nodes.filter((n) => n.type === "ecosystem");
@@ -225,7 +225,7 @@ export default function EcosystemMap({
     >
       {/* Header */}
       <div className="flex items-center justify-between py-2.5 px-4 border-b border-[var(--border)]">
-        <div className="text-[10px] text-[var(--text4)] tracking-[0.12em] font-mono">
+        <div className="text-[12px] text-[var(--text4)] tracking-[0.02em] font-mono font-bold">
           ECOSYSTEM MAP
         </div>
         <div className="flex items-center gap-4">
@@ -234,7 +234,7 @@ export default function EcosystemMap({
               className="w-2 h-2 rounded-full"
               style={{ backgroundColor: "#E05252" }}
             />
-            <span className="text-[9px] font-mono" style={{ color: "#E05252" }}>
+            <span className="text-[11px] tracking-[0.1em] font-normal font-mono" style={{ color: "#E05252" }}>
               COMPETITORS
             </span>
           </div>
@@ -243,7 +243,7 @@ export default function EcosystemMap({
               className="w-2 h-2 rounded-full"
               style={{ backgroundColor: "#4A90E2" }}
             />
-            <span className="text-[9px] font-mono" style={{ color: "#4A90E2" }}>
+            <span className="text-[11px] tracking-[0.1em] font-normal font-mono" style={{ color: "#4A90E2" }}>
               ECOSYSTEM
             </span>
           </div>
@@ -283,24 +283,6 @@ export default function EcosystemMap({
                   </feMerge>
                 </filter>
               </defs>
-              <circle
-                cx="50"
-                cy="50"
-                r="20"
-                fill="none"
-                stroke="#ffffff"
-                strokeWidth="0.1"
-                opacity="0.1"
-              />
-              <circle
-                cx="50"
-                cy="50"
-                r="35"
-                fill="none"
-                stroke="#ffffff"
-                strokeWidth="0.1"
-                opacity="0.05"
-              />
               {competitorPositions.map((comp, i) => (
                 <g key={`comp-line-${i}`}>
                   <line
@@ -398,7 +380,7 @@ export default function EcosystemMap({
                 }}
               />
               <div
-                className="absolute rounded-full animate-ping"
+                className="absolute rounded-full animate-ping "
                 style={{
                   width: sizing.targetSize * 1.15,
                   height: sizing.targetSize * 1.15,
@@ -408,7 +390,7 @@ export default function EcosystemMap({
                 }}
               />
               <div
-                className="absolute rounded-full"
+                className="absolute rounded-full "
                 style={{
                   width: sizing.targetSize * 1.1,
                   height: sizing.targetSize * 1.1,
@@ -441,11 +423,13 @@ export default function EcosystemMap({
                 </div>
               </div>
               <div
-                className="absolute font-mono tracking-[0.2em]"
+                className="absolute font-mono tracking-[0.2em] "
                 style={{
-                  bottom: -20,
-                  fontSize: "8px",
+                  bottom: -30,
+                  fontSize: "15px",
                   color: "#F59E0B",
+                  fontWeight: 'bold',
+                  letterSpacing: '1px',
                   opacity: 0.5,
                 }}
               >

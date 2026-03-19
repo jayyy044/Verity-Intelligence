@@ -52,23 +52,49 @@ export default function BriefPanel({ data }: { data: IntelligenceReport }) {
   // const locationTag = data.company.hq.toUpperCase();
   console.log('BreifPanel', data)
   return (
+
+    //   {/* Sections — each receives the full report */}
+    //   {/* <CompanyProfile data={data.company} /> */}
+    //    {/*<FitScore data={data} />*/}
+    //   {/* <MarketSection data={data} /> */}
+    //   {/* <NewsSection data={data} />  */}
+
+    //   {/* Footer */}
+    //   {/* <ConfidenceFooter
+    //     level={data.confidence.toLowerCase() as "high" | "medium" | "low"}
+    //     notes={data.confidence_note}
+    //   /> */}
+    // </div>
+
     <div className="flex flex-col overflow-y-auto bg-[var(--surface)] brief-scrollbar h-full">
-      {/* Header */}
-      <div className="py-3.5 px-[18px] border-b border-[var(--border)] bg-[var(--surface)] sticky top-0 z-10 font-serif text-[25px] font-light text-[var(--text)] mb-0.5">
-          {/* {data.company.name} */}
+    {/* Header */}
+      <div className="py-3.5 px-[18px] border-b border-[var(--border)] bg-[var(--surface)] sticky top-0 z-10">
+        <div className="font-serif text-[25px] font-light text-[var(--text)] mb-0.5 py-1 ">
+          {data.identity?.name}
+        </div>
+        <div className="text-[13px] text-[var(--text3)] tracking-[0.01em] font-mono flex items-center gap-1.5">
+          <span>{data.identity?.business_model}</span>
+          <span className="opacity-50">/</span>
+          <span>{data.identity?.sector}</span>
+          <span className="opacity-50">/</span>
+          <a 
+            href={`https://${data.identity?.website}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--gold)] hover:underline"
+          >
+            {data.identity?.website}
+          </a>
+        </div>
       </div>
 
-      {/* Sections — each receives the full report */}
-      {/* <CompanyProfile data={data.company} /> */}
-       {/*<FitScore data={data} />*/}
-      {/* <MarketSection data={data} /> */}
-      {/* <NewsSection data={data} />  */}
+      <CompanyProfile 
+        identity={data.identity} 
+        funding={data.funding} 
+        team={data.team} 
+      />
 
-      {/* Footer */}
-      {/* <ConfidenceFooter
-        level={data.confidence.toLowerCase() as "high" | "medium" | "low"}
-        notes={data.confidence_note}
-      /> */}
-    </div>
+    
+  </div>
   );
 }
