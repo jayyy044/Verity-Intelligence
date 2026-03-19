@@ -102,7 +102,7 @@ export default function CompanyProfile({ identity, funding, team }: CompanyProfi
           <div className="text-[14.5px] text-[var(--text4)] tracking-[0.04em] mb-1.5 font-mono font-bold">LEADERSHIP</div>
           <div className="bg-[var(--surface2)] py-2 px-3">
             <div className="text-[13px] text-[var(--text)] font-mono font-medium mb-1">{team.ceo_name}</div>
-            <div className="text-[11.5px] text-[var(--text3)] font-sans leading-[1.4]">{team.ceo_background}</div>
+            <div className="text-[12px] text-[var(--text3)] font-sans leading-[1.4]">{team.ceo_background}</div>
           </div>
         </div>
       ) : (
